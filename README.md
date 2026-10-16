@@ -1,4 +1,4 @@
-# DemoBank QA Agent (AI-Powered)
+# DemoBank QA Agent 
 
 Autonomous, specification-driven QA runner built for the Agentic QA Hackathon. This agent reads a raw Product Requirements Document (PRD), dynamically extracts testable behavioral requirements using Gemini 2.5 Flash, executes Playwright browser scenarios against a DemoBank URL, and generates a comprehensive QA audit report complete with real-time API cost tracking.
 
