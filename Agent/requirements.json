@@ -1,0 +1,87 @@
+[
+  {
+    "id": "REQ-ACCESS-01",
+    "section": "Users and access",
+    "text": "Enter Demo opens the dashboard without a password."
+  },
+  {
+    "id": "REQ-ACCESS-02",
+    "section": "Users and access",
+    "text": "The header identifies the active demo customer."
+  },
+  {
+    "id": "REQ-ACCESS-03",
+    "section": "Users and access",
+    "text": "Logging out returns to the landing page; protected routes are not usable without a session."
+  },
+  {
+    "id": "REQ-DASH-01",
+    "section": "Dashboard and accounts",
+    "text": "The dashboard shows checking and savings accounts with readable names."
+  },
+  {
+    "id": "REQ-DASH-02",
+    "section": "Dashboard and accounts",
+    "text": "Balances are displayed to two decimal places in USD."
+  },
+  {
+    "id": "REQ-DASH-03",
+    "section": "Dashboard and accounts",
+    "text": "The UI must not expose a full account identifier (masked number only)."
+  },
+  {
+    "id": "REQ-TRANSFER-01",
+    "section": "Transfers",
+    "text": "A valid transfer atomically updates source and destination balances."
+  },
+  {
+    "id": "REQ-TRANSFER-02",
+    "section": "Transfers",
+    "text": "Same-account transfers are rejected with a clear explanation and must not alter balances."
+  },
+  {
+    "id": "REQ-TRANSFER-03",
+    "section": "Transfers",
+    "text": "Zero, negative, and over-precision amounts are rejected without changing balances."
+  },
+  {
+    "id": "REQ-TRANSFER-04",
+    "section": "Transfers",
+    "text": "Transfers exceeding available balance are rejected; balances remain unchanged."
+  },
+  {
+    "id": "REQ-TRANSFER-05",
+    "section": "Transfers",
+    "text": "Successful transfers show a success state only after commit; failures must not show success."
+  },
+  {
+    "id": "REQ-TXN-01",
+    "section": "Transaction history",
+    "text": "Combined transaction history is viewable with date, type, amount, and status."
+  },
+  {
+    "id": "REQ-TXN-02",
+    "section": "Transaction history",
+    "text": "Applied filters must match every displayed row."
+  },
+  {
+    "id": "REQ-TXN-03",
+    "section": "Transaction history",
+    "text": "An empty filter result shows a clear empty state, not an error."
+  },
+  {
+    "id": "REQ-PROFILE-01",
+    "section": "Profile",
+    "text": "Profile shows synthetic display name and masked email only."
+  },
+  {
+    "id": "REQ-UI-01",
+    "section": "General interface behavior",
+    "text": "Interactive controls communicate validation and failure states clearly."
+  },
+  {
+    "id": "REQ-UI-02",
+    "section": "General interface behavior",
+    "text": "Submitted actions show loading or prevent duplicate submission while in flight."
+  }
+]
