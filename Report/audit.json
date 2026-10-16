@@ -1,0 +1,2160 @@
+{
+  "target_url": "http://localhost:5173",
+  "api_url": "http://localhost:8000",
+  "prd_path": "..\\test-website\\PRD.md",
+  "started_at": "2026-10-16T01:31:17.877442+00:00",
+  "finished_at": "2026-10-16T01:32:08.709988+00:00",
+  "summary": {
+    "passed": 12,
+    "failed": 4,
+    "unverified": 126
+  },
+  "requirements": [
+    {
+      "id": "1",
+      "section": "Purpose",
+      "text": "A user should be able to enter a demo session."
+    },
+    {
+      "id": "2",
+      "section": "Purpose",
+      "text": "A user should be able to inspect their accounts."
+    },
+    {
+      "id": "3",
+      "section": "Purpose",
+      "text": "A user should be able to inspect their transaction history."
+    },
+    {
+      "id": "4",
+      "section": "Purpose",
+      "text": "A user should be able to transfer funds between their own accounts."
+    },
+    {
+      "id": "5",
+      "section": "Purpose",
+      "text": "A user should be able to view basic profile information."
+    },
+    {
+      "id": "6",
+      "section": "Purpose",
+      "text": "The application must use only synthetic records."
+    },
+    {
+      "id": "7",
+      "section": "Purpose",
+      "text": "The application must never initiate real payments."
+    },
+    {
+      "id": "8",
+      "section": "Purpose",
+      "text": "The application must never connect to an external bank."
+    },
+    {
+      "id": "9",
+      "section": "Users and access",
+      "text": "The target has one seeded demo customer."
+    },
+    {
+      "id": "10",
+      "section": "Users and access",
+      "text": "The landing page provides a clearly labeled 'Enter Demo' action."
+    },
+    {
+      "id": "11",
+      "section": "Users and access",
+      "text": "The 'Enter Demo' action opens the demo dashboard without requiring a password."
+    },
+    {
+      "id": "12",
+      "section": "Users and access",
+      "text": "The 'Enter Demo' action opens the demo dashboard without requiring real identity information."
+    },
+    {
+      "id": "13",
+      "section": "Users and access",
+      "text": "The header identifies the active demo customer."
+    },
+    {
+      "id": "14",
+      "section": "Users and access",
+      "text": "The header provides a 'Log out' action."
+    },
+    {
+      "id": "15",
+      "section": "Users and access",
+      "text": "Logging out returns the user to the landing page."
+    },
+    {
+      "id": "16",
+      "section": "Users and access",
+      "text": "Protected dashboard views should not remain usable after logout."
+    },
+    {
+      "id": "17",
+      "section": "Users and access",
+      "text": "Direct navigation to protected dashboard views after logout should return the user to the landing page or an access-required state."
+    },
+    {
+      "id": "18",
+      "section": "Users and access",
+      "text": "Refreshing while in a valid demo session should preserve that session."
+    },
+    {
+      "id": "19",
+      "section": "Users and access",
+      "text": "A logged-out user must not regain access merely by refreshing a protected page."
+    },
+    {
+      "id": "20",
+      "section": "Dashboard and accounts",
+      "text": "The dashboard shows the customer's checking account."
+    },
+    {
+      "id": "21",
+      "section": "Dashboard and accounts",
+      "text": "The dashboard shows the customer's savings account."
+    },
+    {
+      "id": "22",
+      "section": "Dashboard and accounts",
+      "text": "Each account displays a readable account name."
+    },
+    {
+      "id": "23",
+      "section": "Dashboard and accounts",
+      "text": "Each account displays a masked account identifier."
+    },
+    {
+      "id": "24",
+      "section": "Dashboard and accounts",
+      "text": "Each account displays account type."
+    },
+    {
+      "id": "25",
+      "section": "Dashboard and accounts",
+      "text": "Each account displays current available balance in USD."
+    },
+    {
+      "id": "26",
+      "section": "Dashboard and accounts",
+      "text": "Balances are displayed to two decimal places."
+    },
+    {
+      "id": "27",
+      "section": "Dashboard and accounts",
+      "text": "The UI must not expose a full account identifier."
+    },
+    {
+      "id": "28",
+      "section": "Dashboard and accounts",
+      "text": "Selecting an account opens an account detail view."
+    },
+    {
+      "id": "29",
+      "section": "Dashboard and accounts",
+      "text": "The account detail view shows the account's current balance."
+    },
+    {
+      "id": "30",
+      "section": "Dashboard and accounts",
+      "text": "The account detail view shows the account's related transaction history."
+    },
+    {
+      "id": "31",
+      "section": "Dashboard and accounts",
+      "text": "Account balances shown on the dashboard and detail view must agree with the latest successful transactions."
+    },
+    {
+      "id": "32",
+      "section": "Transfers between owned accounts",
+      "text": "The user can transfer funds between the checking and savings accounts owned by the demo customer."
+    },
+    {
+      "id": "33",
+      "section": "Transfers between owned accounts",
+      "text": "The transfer form includes a source account field."
+    },
+    {
+      "id": "34",
+      "section": "Transfers between owned accounts",
+      "text": "The transfer form includes a destination account field."
+    },
+    {
+      "id": "35",
+      "section": "Transfers between owned accounts",
+      "text": "The transfer form includes an amount field."
+    },
+    {
+      "id": "36",
+      "section": "Transfers between owned accounts",
+      "text": "The transfer form includes an optional memo field."
+    },
+    {
+      "id": "37",
+      "section": "Transfers between owned accounts",
+      "text": "The source and destination accounts for a transfer must be different."
+    },
+    {
+      "id": "38",
+      "section": "Transfers between owned accounts",
+      "text": "Same-account transfers must be rejected with a clear explanation."
+    },
+    {
+      "id": "39",
+      "section": "Transfers between owned accounts",
+      "text": "Same-account transfers must not alter balances."
+    },
+    {
+      "id": "40",
+      "section": "Transfers between owned accounts",
+      "text": "Same-account transfers must not create a transaction."
+    },
+    {
+      "id": "41",
+      "section": "Transfers between owned accounts",
+      "text": "The transfer amount must be a positive number greater than zero."
+    },
+    {
+      "id": "42",
+      "section": "Transfers between owned accounts",
+      "text": "The transfer amount must have no more than two digits after the decimal point."
+    },
+    {
+      "id": "43",
+      "section": "Transfers between owned accounts",
+      "text": "Blank transfer amount values must be rejected with a clear validation message."
+    },
+    {
+      "id": "44",
+      "section": "Transfers between owned accounts",
+      "text": "Zero transfer amount values must be rejected with a clear validation message."
+    },
+    {
+      "id": "45",
+      "section": "Transfers between owned accounts",
+      "text": "Negative transfer amount values must be rejected with a clear validation message."
+    },
+    {
+      "id": "46",
+      "section": "Transfers between owned accounts",
+      "text": "Non-numeric transfer amount values must be rejected with a clear validation message."
+    },
+    {
+      "id": "47",
+      "section": "Transfers between owned accounts",
+      "text": "Over-precision transfer amount values (more than two decimal places) must be rejected with a clear validation message."
+    },
+    {
+      "id": "48",
+      "section": "Transfers between owned accounts",
+      "text": "Rejected input for transfer amount must not create a transaction."
+    },
+    {
+      "id": "49",
+      "section": "Transfers between owned accounts",
+      "text": "Rejected input for transfer amount must not change balances."
+    },
+    {
+      "id": "50",
+      "section": "Transfers between owned accounts",
+      "text": "The transfer amount must not exceed the source account's available balance."
+    },
+    {
+      "id": "51",
+      "section": "Transfers between owned accounts",
+      "text": "If funds are insufficient, the transfer must be rejected."
+    },
+    {
+      "id": "52",
+      "section": "Transfers between owned accounts",
+      "text": "If funds are insufficient, both balances must remain unchanged."
+    },
+    {
+      "id": "53",
+      "section": "Transfers between owned accounts",
+      "text": "If funds are insufficient, no completed transfer must appear in history."
+    },
+    {
+      "id": "54",
+      "section": "Transfers between owned accounts",
+      "text": "A valid transfer is atomic: the source balance decreases by the amount."
+    },
+    {
+      "id": "55",
+      "section": "Transfers between owned accounts",
+      "text": "A valid transfer is atomic: the destination balance increases by the same amount."
+    },
+    {
+      "id": "56",
+      "section": "Transfers between owned accounts",
+      "text": "No partial transfer is allowed."
+    },
+    {
+      "id": "57",
+      "section": "Transfers between owned accounts",
+      "text": "A successful transfer creates one completed transfer record."
+    },
+    {
+      "id": "58",
+      "section": "Transfers between owned accounts",
+      "text": "A successful transfer record can be found in both relevant account histories."
+    },
+    {
+      "id": "59",
+      "section": "Transfers between owned accounts",
+      "text": "The transfer record shows the amount."
+    },
+    {
+      "id": "60",
+      "section": "Transfers between owned accounts",
+      "text": "The transfer record shows the date and time."
+    },
+    {
+      "id": "61",
+      "section": "Transfers between owned accounts",
+      "text": "The transfer record shows the source account."
+    },
+    {
+      "id": "62",
+      "section": "Transfers between owned accounts",
+      "text": "The transfer record shows the destination account."
+    },
+    {
+      "id": "63",
+      "section": "Transfers between owned accounts",
+      "text": "The transfer record shows the status."
+    },
+    {
+      "id": "64",
+      "section": "Transfers between owned accounts",
+      "text": "The transfer record shows the memo if supplied."
+    },
+    {
+      "id": "65",
+      "section": "Transfers between owned accounts",
+      "text": "The UI reports success only after the transfer has been committed."
+    },
+    {
+      "id": "66",
+      "section": "Transfers between owned accounts",
+      "text": "If a transfer is rejected or fails, the UI must explain that it did not complete."
+    },
+    {
+      "id": "67",
+      "section": "Transfers between owned accounts",
+      "text": "If a transfer is rejected or fails, the UI must not show a success state."
+    },
+    {
+      "id": "68",
+      "section": "Transfers between owned accounts",
+      "text": "Refreshing after a successful transfer must preserve the updated balances."
+    },
+    {
+      "id": "69",
+      "section": "Transfers between owned accounts",
+      "text": "Refreshing after a successful transfer must preserve the transaction record."
+    },
+    {
+      "id": "70",
+      "section": "Transaction history",
+      "text": "The user can view a combined transaction history."
+    },
+    {
+      "id": "71",
+      "section": "Transaction history",
+      "text": "The user can view account-specific history."
+    },
+    {
+      "id": "72",
+      "section": "Transaction history",
+      "text": "Each transaction history row shows date and time."
+    },
+    {
+      "id": "73",
+      "section": "Transaction history",
+      "text": "Each transaction history row shows description or memo."
+    },
+    {
+      "id": "74",
+      "section": "Transaction history",
+      "text": "Each transaction history row shows transaction type."
+    },
+    {
+      "id": "75",
+      "section": "Transaction history",
+      "text": "Each transaction history row shows amount."
+    },
+    {
+      "id": "76",
+      "section": "Transaction history",
+      "text": "Each transaction history row shows status."
+    },
+    {
+      "id": "77",
+      "section": "Transaction history",
+      "text": "Each transaction history row shows relevant account."
+    },
+    {
+      "id": "78",
+      "section": "Transaction history",
+      "text": "Amount direction should be clear for deposits."
+    },
+    {
+      "id": "79",
+      "section": "Transaction history",
+      "text": "Amount direction should be clear for withdrawals."
+    },
+    {
+      "id": "80",
+      "section": "Transaction history",
+      "text": "Amount direction should be clear for transfers."
+    },
+    {
+      "id": "81",
+      "section": "Transaction history",
+      "text": "The user can filter history by account."
+    },
+    {
+      "id": "82",
+      "section": "Transaction history",
+      "text": "The user can filter history by transaction type."
+    },
+    {
+      "id": "83",
+      "section": "Transaction history",
+      "text": "The user can filter history by status."
+    },
+    {
+      "id": "84",
+      "section": "Transaction history",
+      "text": "The user can filter history by date range."
+    },
+    {
+      "id": "85",
+      "section": "Transaction history",
+      "text": "When filters are applied, every displayed row must satisfy all selected filters."
+    },
+    {
+      "id": "86",
+      "section": "Transaction history",
+      "text": "The start and end dates for history filters are inclusive."
+    },
+    {
+      "id": "87",
+      "section": "Transaction history",
+      "text": "A transaction occurring on either boundary date must be included when it matches the other filters."
+    },
+    {
+      "id": "88",
+      "section": "Transaction history",
+      "text": "An empty result set must show a clear empty state."
+    },
+    {
+      "id": "89",
+      "section": "Transaction history",
+      "text": "An empty result set must not show an error."
+    },
+    {
+      "id": "90",
+      "section": "Transaction history",
+      "text": "An empty result set must not show unrelated transactions."
+    },
+    {
+      "id": "91",
+      "section": "Transaction history",
+      "text": "Clearing filters restores the unfiltered history."
+    },
+    {
+      "id": "92",
+      "section": "Profile",
+      "text": "A profile view displays only synthetic demo-customer details."
+    },
+    {
+      "id": "93",
+      "section": "Profile",
+      "text": "The profile view displays the demo-customer's display name."
+    },
+    {
+      "id": "94",
+      "section": "Profile",
+      "text": "The profile view displays the demo-customer's masked email address."
+    },
+    {
+      "id": "95",
+      "section": "Profile",
+      "text": "The profile view must not reveal passwords."
+    },
+    {
+      "id": "96",
+      "section": "Profile",
+      "text": "The profile view must not reveal authentication tokens."
+    },
+    {
+      "id": "97",
+      "section": "Profile",
+      "text": "The profile view must not reveal full account identifiers."
+    },
+    {
+      "id": "98",
+      "section": "Profile",
+      "text": "The profile view must not reveal data belonging to another user."
+    },
+    {
+      "id": "99",
+      "section": "General interface behavior",
+      "text": "The target works in a current desktop browser."
+    },
+    {
+      "id": "100",
+      "section": "General interface behavior",
+      "text": "The target works at a 1280 \u00d7 800 viewport."
+    },
+    {
+      "id": "101",
+      "section": "General interface behavior",
+      "text": "The target remains usable at narrower widths than 1280x800."
+    },
+    {
+      "id": "102",
+      "section": "General interface behavior",
+      "text": "Interactive controls have readable labels."
+    },
+    {
+      "id": "103",
+      "section": "General interface behavior",
+      "text": "Interactive controls communicate loading states."
+    },
+    {
+      "id": "104",
+      "section": "General interface behavior",
+      "text": "Interactive controls communicate success states."
+    },
+    {
+      "id": "105",
+      "section": "General interface behavior",
+      "text": "Interactive controls communicate validation states."
+    },
+    {
+      "id": "106",
+      "section": "General interface behavior",
+      "text": "Interactive controls communicate failure states."
+    },
+    {
+      "id": "107",
+      "section": "General interface behavior",
+      "text": "A submitted action should not silently disappear."
+    },
+    {
+      "id": "108",
+      "section": "General interface behavior",
+      "text": "While waiting for a submitted action, the UI should show a loading state."
+    },
+    {
+      "id": "109",
+      "section": "General interface behavior",
+      "text": "While waiting for a submitted action, the UI should prevent accidental duplicate submission."
+    },
+    {
+      "id": "110",
+      "section": "General interface behavior",
+      "text": "Navigation links and buttons lead to the labeled destination."
+    },
+    {
+      "id": "111",
+      "section": "General interface behavior",
+      "text": "Navigation links and buttons perform the labeled action."
+    },
+    {
+      "id": "112",
+      "section": "General interface behavior",
+      "text": "A recoverable error must leave the user able to retry."
+    },
+    {
+      "id": "113",
+      "section": "General interface behavior",
+      "text": "A recoverable error must leave the user able to return to the dashboard."
+    },
+    {
+      "id": "114",
+      "section": "Seed data expectations",
+      "text": "The demo begins with enough historical transactions to exercise account filters."
+    },
+    {
+      "id": "115",
+      "section": "Seed data expectations",
+      "text": "The demo begins with enough historical transactions to exercise type filters."
+    },
+    {
+      "id": "116",
+      "section": "Seed data expectations",
+      "text": "The demo begins with enough historical transactions to exercise status filters."
+    },
+    {
+      "id": "117",
+      "section": "Seed data expectations",
+      "text": "The demo begins with enough historical transactions to exercise date filters."
+    },
+    {
+      "id": "118",
+      "section": "Seed data expectations",
+      "text": "Seed records should include multiple dates."
+    },
+    {
+      "id": "119",
+      "section": "Seed data expectations",
+      "text": "Seed records should include at least one transfer between the two accounts."
+    },
+    {
+      "id": "120",
+      "section": "Seed data expectations",
+      "text": "The demo has no signup features."
+    },
+    {
+      "id": "121",
+      "section": "Seed data expectations",
+      "text": "The demo has no external payment features."
+    },
+    {
+      "id": "122",
+      "section": "Seed data expectations",
+      "text": "The demo has no bill-pay features."
+    },
+    {
+      "id": "123",
+      "section": "Seed data expectations",
+      "text": "The demo has no loan features."
+    },
+    {
+      "id": "124",
+      "section": "Seed data expectations",
+      "text": "The demo has no card features."
+    },
+    {
+      "id": "125",
+      "section": "Seed data expectations",
+      "text": "The demo has no multi-user features."
+    }
+  ],
+  "results": [
+    {
+      "requirement_id": "REQ-ACCESS-01",
+      "verdict": "passed",
+      "title": "Enter Demo reaches dashboard",
+      "steps": [
+        "Open landing page",
+        "Click Enter Demo"
+      ],
+      "expected": "Dashboard loads without password.",
+      "observed": "URL is http://localhost:5173/dashboard",
+      "evidence": [
+        "reports\\access-enter-demo.png"
+      ],
+      "error": null
+    },
+    {
+      "requirement_id": "REQ-ACCESS-02",
+      "verdict": "passed",
+      "title": "Header shows demo customer",
+      "steps": [
+        "After Enter Demo, inspect header session area"
+      ],
+      "expected": "Display name visible in header.",
+      "observed": "Header text: Signed in as\nAvery Demo",
+      "evidence": [],
+      "error": null
+    },
+    {
+      "requirement_id": "REQ-DASH-01",
+      "verdict": "passed",
+      "title": "Dashboard shows two accounts with formatted balances",
+      "steps": [
+        "On dashboard, count account cards and balance format"
+      ],
+      "expected": "Checking and savings with $X,XXX.XX balances.",
+      "observed": "Balances: ['\u2212$1,000,000.01USD', '$1,012,644.76USD']",
+      "evidence": [
+        "reports\\dashboard-accounts.png"
+      ],
+      "error": null
+    },
+    {
+      "requirement_id": "REQ-DASH-02",
+      "verdict": "passed",
+      "title": "Balances use two decimal places",
+      "steps": [
+        "Read balance text on dashboard cards"
+      ],
+      "expected": "USD amounts like $2,500.00.",
+      "observed": "[]",
+      "evidence": [
+        "reports\\dashboard-decimals.png"
+      ],
+      "error": null
+    },
+    {
+      "requirement_id": "REQ-DASH-03",
+      "verdict": "passed",
+      "title": "Account identifiers are masked on dashboard",
+      "steps": [
+        "Inspect dashboard account card numbers for full UUIDs"
+      ],
+      "expected": "No full UUID in account card UI.",
+      "observed": "Only masked number shown.",
+      "evidence": [
+        "reports\\dashboard-masked.png"
+      ],
+      "error": null
+    },
+    {
+      "requirement_id": "REQ-TRANSFER-01",
+      "verdict": "passed",
+      "title": "Valid transfer updates both balances atomically",
+      "steps": [
+        "Record balances via API",
+        "Transfer $1.00 between accounts",
+        "Compare balances after success"
+      ],
+      "expected": "Source -1.00, destination +1.00.",
+      "observed": "Source delta -1.00, destination delta 1.00",
+      "evidence": [
+        "reports\\transfer-success.png"
+      ],
+      "error": null
+    },
+    {
+      "requirement_id": "REQ-TRANSFER-05",
+      "verdict": "passed",
+      "title": "UI success messaging matches committed transfer",
+      "steps": [
+        "After successful transfer, confirm success alert (not failure copy)"
+      ],
+      "expected": "Success only after commit; failures show non-success copy.",
+      "observed": "Success alert visible; no failure alert.",
+      "evidence": [
+        "reports\\transfer-messaging.png"
+      ],
+      "error": null
+    },
+    {
+      "requirement_id": "REQ-TRANSFER-02",
+      "verdict": "passed",
+      "title": "Same-account transfer rejected without balance change",
+      "steps": [
+        "Attempt transfer with same source and destination",
+        "Verify error and unchanged balances"
+      ],
+      "expected": "Clear failure; balances unchanged.",
+      "observed": "Balances unchanged.",
+      "evidence": [
+        "reports\\transfer-same-account.png"
+      ],
+      "error": null
+    },
+    {
+      "requirement_id": "REQ-TRANSFER-03",
+      "verdict": "failed",
+      "title": "Invalid amount handling failed",
+      "steps": [
+        "Try amount 0",
+        "Try negative amount",
+        "Try 1.234 over-precision"
+      ],
+      "expected": "Reject invalid amounts.",
+      "observed": "Locator expected to be visible\nActual value: None\nError: element(s) not found \nCall log:\n  - Expect \"to_be_visible\" get_by_text(re.compile(r\"Transfer not completed|Enter an amount\", re.IGNORECASE)) with timeout 15000ms\n  - waiting for get_by_text(re.compile(r\"Transfer not completed|Enter an amount\", re.IGNORECASE))\n\nAria snapshot:\n- link \"Skip to main content\":\n  - /url: \"#main\"\n- banner:\n  - link \"DemoBank dashboard\":\n    - /url: /dashboard\n    - text: DemoBank\n  - navigation \"Main\":\n    - link \"Dashboard\":\n      - /url: /dashboard\n    - link \"Transactions\":\n      - /url: /transactions\n    - link \"Transfer\":\n      - /url: /transfer\n    - link \"Profile\":\n      - /url: /profile\n  - text: Signed in as Avery Demo\n  - button \"Log out\"\n- main:\n  - paragraph: Move money\n  - heading \"Transfer between your accounts\" [level=1]\n  - text: From account\n  - combobox \"From account\":\n    - option \"Select an account\"\n    - option \"Everyday Checking (\u2022\u2022\u2022\u2022 1042) \u2014 \u2212$1,000,001.01\" [selected]\n    - option \"Rainy Day Savings (\u2022\u2022\u2022\u2022 7781) \u2014 $1,012,645.76\"\n  - text: To account\n  - combobox \"To account\":\n    - option \"Select an account\"\n    - option \"Everyday Checking (\u2022\u2022\u2022\u2022 1042) \u2014 \u2212$1,000,001.01\"\n    - option \"Rainy Day Savings (\u2022\u2022\u2022\u2022 7781) \u2014 $1,012,645.76\" [selected]\n  - text: Amount (USD)\n  - textbox \"Amount (USD)\":\n    - /placeholder: \"0.00\"\n  - paragraph: Up to two decimal places, for example 25.00.\n  - text: Memo (optional)\n  - textbox \"Memo (optional)\"\n  - button \"Transfer funds\"\n  - status:\n    - strong: Transfer complete\n    - term: Amount\n    - definition: $0.00\n    - term: From\n    - definition: Everyday Checking (\u2022\u2022\u2022\u2022 1042)\n    - term: To\n    - definition: Rainy Day Savings (\u2022\u2022\u2022\u2022 7781)\n    - term: Date & time\n    - definition: Oct 15, 2026, 6:31 PM PDT\n    - term: New Everyday Checking balance\n    - definition: \u2212$1,000,001.01\n    - term: New Rainy Day Savings balance\n    - definition: $1,012,645.76\n    - link \"View Everyday Checking history\":\n      - /url: /accounts/00000000-0000-0000-0000-000000000101\n    - link \"View Rainy Day Savings history\":\n      - /url: /accounts/00000000-0000-0000-0000-000000000102\n  - region \"Current balances\":\n    - heading \"Current balances\" [level=2]\n    - list:\n      - listitem:\n        - link \"Everyday Checking (\u2022\u2022\u2022\u2022 1042)\":\n          - /url: /accounts/00000000-0000-0000-0000-000000000101\n        - text: \u2212$1,000,001.01\n      - listitem:\n        - link \"Rainy Day Savings (\u2022\u2022\u2022\u2022 7781)\":\n          - /url: /accounts/00000000-0000-0000-0000-000000000102\n        - text: $1,012,645.76\n- contentinfo: DemoBank uses synthetic demo data only. Service online",
+      "evidence": [
+        "reports\\transfer-invalid-fail.png"
+      ],
+      "error": "Locator expected to be visible\nActual value: None\nError: element(s) not found \nCall log:\n  - Expect \"to_be_visible\" get_by_text(re.compile(r\"Transfer not completed|Enter an amount\", re.IGNORECASE)) with timeout 15000ms\n  - waiting for get_by_text(re.compile(r\"Transfer not completed|Enter an amount\", re.IGNORECASE))\n\nAria snapshot:\n- link \"Skip to main content\":\n  - /url: \"#main\"\n- banner:\n  - link \"DemoBank dashboard\":\n    - /url: /dashboard\n    - text: DemoBank\n  - navigation \"Main\":\n    - link \"Dashboard\":\n      - /url: /dashboard\n    - link \"Transactions\":\n      - /url: /transactions\n    - link \"Transfer\":\n      - /url: /transfer\n    - link \"Profile\":\n      - /url: /profile\n  - text: Signed in as Avery Demo\n  - button \"Log out\"\n- main:\n  - paragraph: Move money\n  - heading \"Transfer between your accounts\" [level=1]\n  - text: From account\n  - combobox \"From account\":\n    - option \"Select an account\"\n    - option \"Everyday Checking (\u2022\u2022\u2022\u2022 1042) \u2014 \u2212$1,000,001.01\" [selected]\n    - option \"Rainy Day Savings (\u2022\u2022\u2022\u2022 7781) \u2014 $1,012,645.76\"\n  - text: To account\n  - combobox \"To account\":\n    - option \"Select an account\"\n    - option \"Everyday Checking (\u2022\u2022\u2022\u2022 1042) \u2014 \u2212$1,000,001.01\"\n    - option \"Rainy Day Savings (\u2022\u2022\u2022\u2022 7781) \u2014 $1,012,645.76\" [selected]\n  - text: Amount (USD)\n  - textbox \"Amount (USD)\":\n    - /placeholder: \"0.00\"\n  - paragraph: Up to two decimal places, for example 25.00.\n  - text: Memo (optional)\n  - textbox \"Memo (optional)\"\n  - button \"Transfer funds\"\n  - status:\n    - strong: Transfer complete\n    - term: Amount\n    - definition: $0.00\n    - term: From\n    - definition: Everyday Checking (\u2022\u2022\u2022\u2022 1042)\n    - term: To\n    - definition: Rainy Day Savings (\u2022\u2022\u2022\u2022 7781)\n    - term: Date & time\n    - definition: Oct 15, 2026, 6:31 PM PDT\n    - term: New Everyday Checking balance\n    - definition: \u2212$1,000,001.01\n    - term: New Rainy Day Savings balance\n    - definition: $1,012,645.76\n    - link \"View Everyday Checking history\":\n      - /url: /accounts/00000000-0000-0000-0000-000000000101\n    - link \"View Rainy Day Savings history\":\n      - /url: /accounts/00000000-0000-0000-0000-000000000102\n  - region \"Current balances\":\n    - heading \"Current balances\" [level=2]\n    - list:\n      - listitem:\n        - link \"Everyday Checking (\u2022\u2022\u2022\u2022 1042)\":\n          - /url: /accounts/00000000-0000-0000-0000-000000000101\n        - text: \u2212$1,000,001.01\n      - listitem:\n        - link \"Rainy Day Savings (\u2022\u2022\u2022\u2022 7781)\":\n          - /url: /accounts/00000000-0000-0000-0000-000000000102\n        - text: $1,012,645.76\n- contentinfo: DemoBank uses synthetic demo data only. Service online"
+    },
+    {
+      "requirement_id": "REQ-TRANSFER-04",
+      "verdict": "failed",
+      "title": "Insufficient funds check failed",
+      "steps": [
+        "Attempt transfer far above available balance"
+      ],
+      "expected": "Reject over-balance transfer.",
+      "observed": "Locator expected to be visible\nActual value: None\nError: element(s) not found \nCall log:\n  - Expect \"to_be_visible\" get_by_text(\"Transfer not completed\") with timeout 15000ms\n  - waiting for get_by_text(\"Transfer not completed\")\n\nAria snapshot:\n- link \"Skip to main content\":\n  - /url: \"#main\"\n- banner:\n  - link \"DemoBank dashboard\":\n    - /url: /dashboard\n    - text: DemoBank\n  - navigation \"Main\":\n    - link \"Dashboard\":\n      - /url: /dashboard\n    - link \"Transactions\":\n      - /url: /transactions\n    - link \"Transfer\":\n      - /url: /transfer\n    - link \"Profile\":\n      - /url: /profile\n  - text: Signed in as Avery Demo\n  - button \"Log out\"\n- main:\n  - paragraph: Move money\n  - heading \"Transfer between your accounts\" [level=1]\n  - text: From account\n  - combobox \"From account\":\n    - option \"Select an account\"\n    - option \"Everyday Checking (\u2022\u2022\u2022\u2022 1042) \u2014 \u2212$1,000,000.00\" [selected]\n    - option \"Rainy Day Savings (\u2022\u2022\u2022\u2022 7781) \u2014 $1,012,644.75\"\n  - text: To account\n  - combobox \"To account\":\n    - option \"Select an account\"\n    - option \"Everyday Checking (\u2022\u2022\u2022\u2022 1042) \u2014 \u2212$1,000,000.00\"\n    - option \"Rainy Day Savings (\u2022\u2022\u2022\u2022 7781) \u2014 $1,012,644.75\" [selected]\n  - text: Amount (USD)\n  - textbox \"Amount (USD)\":\n    - /placeholder: \"0.00\"\n  - paragraph: Up to two decimal places, for example 25.00.\n  - text: Memo (optional)\n  - textbox \"Memo (optional)\"\n  - button \"Transfer funds\"\n  - status:\n    - strong: Transfer complete\n    - term: Amount\n    - definition: \u2212$1.01\n    - term: From\n    - definition: Everyday Checking (\u2022\u2022\u2022\u2022 1042)\n    - term: To\n    - definition: Rainy Day Savings (\u2022\u2022\u2022\u2022 7781)\n    - term: Date & time\n    - definition: Oct 15, 2026, 6:31 PM PDT\n    - term: New Everyday Checking balance\n    - definition: \u2212$1,000,000.00\n    - term: New Rainy Day Savings balance\n    - definition: $1,012,644.75\n    - link \"View Everyday Checking history\":\n      - /url: /accounts/00000000-0000-0000-0000-000000000101\n    - link \"View Rainy Day Savings history\":\n      - /url: /accounts/00000000-0000-0000-0000-000000000102\n  - region \"Current balances\":\n    - heading \"Current balances\" [level=2]\n    - list:\n      - listitem:\n        - link \"Everyday Checking (\u2022\u2022\u2022\u2022 1042)\":\n          - /url: /accounts/00000000-0000-0000-0000-000000000101\n        - text: \u2212$1,000,000.00\n      - listitem:\n        - link \"Rainy Day Savings (\u2022\u2022\u2022\u2022 7781)\":\n          - /url: /accounts/00000000-0000-0000-0000-000000000102\n        - text: $1,012,644.75\n- contentinfo: DemoBank uses synthetic demo data only. Service online",
+      "evidence": [
+        "reports\\transfer-insufficient-fail.png"
+      ],
+      "error": "Locator expected to be visible\nActual value: None\nError: element(s) not found \nCall log:\n  - Expect \"to_be_visible\" get_by_text(\"Transfer not completed\") with timeout 15000ms\n  - waiting for get_by_text(\"Transfer not completed\")\n\nAria snapshot:\n- link \"Skip to main content\":\n  - /url: \"#main\"\n- banner:\n  - link \"DemoBank dashboard\":\n    - /url: /dashboard\n    - text: DemoBank\n  - navigation \"Main\":\n    - link \"Dashboard\":\n      - /url: /dashboard\n    - link \"Transactions\":\n      - /url: /transactions\n    - link \"Transfer\":\n      - /url: /transfer\n    - link \"Profile\":\n      - /url: /profile\n  - text: Signed in as Avery Demo\n  - button \"Log out\"\n- main:\n  - paragraph: Move money\n  - heading \"Transfer between your accounts\" [level=1]\n  - text: From account\n  - combobox \"From account\":\n    - option \"Select an account\"\n    - option \"Everyday Checking (\u2022\u2022\u2022\u2022 1042) \u2014 \u2212$1,000,000.00\" [selected]\n    - option \"Rainy Day Savings (\u2022\u2022\u2022\u2022 7781) \u2014 $1,012,644.75\"\n  - text: To account\n  - combobox \"To account\":\n    - option \"Select an account\"\n    - option \"Everyday Checking (\u2022\u2022\u2022\u2022 1042) \u2014 \u2212$1,000,000.00\"\n    - option \"Rainy Day Savings (\u2022\u2022\u2022\u2022 7781) \u2014 $1,012,644.75\" [selected]\n  - text: Amount (USD)\n  - textbox \"Amount (USD)\":\n    - /placeholder: \"0.00\"\n  - paragraph: Up to two decimal places, for example 25.00.\n  - text: Memo (optional)\n  - textbox \"Memo (optional)\"\n  - button \"Transfer funds\"\n  - status:\n    - strong: Transfer complete\n    - term: Amount\n    - definition: \u2212$1.01\n    - term: From\n    - definition: Everyday Checking (\u2022\u2022\u2022\u2022 1042)\n    - term: To\n    - definition: Rainy Day Savings (\u2022\u2022\u2022\u2022 7781)\n    - term: Date & time\n    - definition: Oct 15, 2026, 6:31 PM PDT\n    - term: New Everyday Checking balance\n    - definition: \u2212$1,000,000.00\n    - term: New Rainy Day Savings balance\n    - definition: $1,012,644.75\n    - link \"View Everyday Checking history\":\n      - /url: /accounts/00000000-0000-0000-0000-000000000101\n    - link \"View Rainy Day Savings history\":\n      - /url: /accounts/00000000-0000-0000-0000-000000000102\n  - region \"Current balances\":\n    - heading \"Current balances\" [level=2]\n    - list:\n      - listitem:\n        - link \"Everyday Checking (\u2022\u2022\u2022\u2022 1042)\":\n          - /url: /accounts/00000000-0000-0000-0000-000000000101\n        - text: \u2212$1,000,000.00\n      - listitem:\n        - link \"Rainy Day Savings (\u2022\u2022\u2022\u2022 7781)\":\n          - /url: /accounts/00000000-0000-0000-0000-000000000102\n        - text: $1,012,644.75\n- contentinfo: DemoBank uses synthetic demo data only. Service online"
+    },
+    {
+      "requirement_id": "REQ-TXN-01",
+      "verdict": "failed",
+      "title": "Transaction history failed to load",
+      "steps": [
+        "Open Transactions page",
+        "Verify table rows present"
+      ],
+      "expected": "Rows visible.",
+      "observed": "Locator expected to be visible\nActual value: None\nError: strict mode violation: get_by_role(\"heading\", name=\"Transactions\") resolved to 2 elements:\n    1) <h1>Transactions</h1> aka get_by_role(\"heading\", name=\"Transactions\", exact=True)\n    2) <h2 id=\"results-heading\" class=\"section-title\">All transactions</h2> aka get_by_role(\"heading\", name=\"All transactions\")\n \nCall log:\n  - Expect \"to_be_visible\" get_by_role(\"heading\", name=\"Transactions\") with timeout 5000ms\n  - waiting for get_by_role(\"heading\", name=\"Transactions\")\n",
+      "evidence": [
+        "reports\\transactions-list-fail.png"
+      ],
+      "error": "Locator expected to be visible\nActual value: None\nError: strict mode violation: get_by_role(\"heading\", name=\"Transactions\") resolved to 2 elements:\n    1) <h1>Transactions</h1> aka get_by_role(\"heading\", name=\"Transactions\", exact=True)\n    2) <h2 id=\"results-heading\" class=\"section-title\">All transactions</h2> aka get_by_role(\"heading\", name=\"All transactions\")\n \nCall log:\n  - Expect \"to_be_visible\" get_by_role(\"heading\", name=\"Transactions\") with timeout 5000ms\n  - waiting for get_by_role(\"heading\", name=\"Transactions\")\n"
+    },
+    {
+      "requirement_id": "REQ-TXN-02",
+      "verdict": "passed",
+      "title": "Transfer filter matches displayed rows",
+      "steps": [
+        "Filter type=transfer",
+        "Apply filters",
+        "Verify rows are transfers only"
+      ],
+      "expected": "Every row is a transfer.",
+      "observed": "Sample types: ['Transfer', 'Transfer', 'Transfer', 'Transfer', 'Transfer']",
+      "evidence": [
+        "reports\\transactions-filter.png"
+      ],
+      "error": null
+    },
+    {
+      "requirement_id": "REQ-TXN-03",
+      "verdict": "failed",
+      "title": "Empty filter state missing or error shown",
+      "steps": [
+        "Apply impossible date range",
+        "Expect empty state message"
+      ],
+      "expected": "Empty state copy.",
+      "observed": "Locator expected to be visible\nActual value: None\nError: element(s) not found \nCall log:\n  - Expect \"to_be_visible\" get_by_text(\"No transactions match these filters\") with timeout 15000ms\n  - waiting for get_by_text(\"No transactions match these filters\")\n\nAria snapshot:\n- link \"Skip to main content\":\n  - /url: \"#main\"\n- banner:\n  - link \"DemoBank dashboard\":\n    - /url: /dashboard\n    - text: DemoBank\n  - navigation \"Main\":\n    - link \"Dashboard\":\n      - /url: /dashboard\n    - link \"Transactions\":\n      - /url: /transactions\n    - link \"Transfer\":\n      - /url: /transfer\n    - link \"Profile\":\n      - /url: /profile\n  - text: Signed in as Avery Demo\n  - button \"Log out\"\n- main:\n  - paragraph: History\n  - heading \"Transactions\" [level=1]\n  - form \"Filter transactions\":\n    - text: Account\n    - combobox \"Account\":\n      - option \"All accounts\" [selected]\n      - option \"Everyday Checking (\u2022\u2022\u2022\u2022 1042)\"\n      - option \"Rainy Day Savings (\u2022\u2022\u2022\u2022 7781)\"\n    - text: Type\n    - combobox \"Type\":\n      - option \"All types\" [selected]\n      - option \"Deposit\"\n      - option \"Withdrawal\"\n      - option \"Transfer\"\n    - text: Status\n    - combobox \"Status\":\n      - option \"All statuses\" [selected]\n      - option \"Completed\"\n      - option \"Pending\"\n      - option \"Failed\"\n    - text: Start date\n    - textbox \"Start date\"\n    - text: End date\n    - textbox \"End date\": 2099-01-02\n    - paragraph: Start and end dates are inclusive and use Pacific Time.\n    - button \"Apply filters\"\n    - button \"Clear filters\"\n  - region \"Filtered results\":\n    - heading \"Filtered results\" [level=2]\n    - status: Showing 23 transactions\n    - table \"Filtered transaction history\":\n      - caption: Filtered transaction history\n      - rowgroup:\n        - row \"Date & time Description Type Account Amount Status\":\n          - columnheader \"Date & time\"\n          - columnheader \"Description\"\n          - columnheader \"Type\"\n          - columnheader \"Account\"\n          - columnheader \"Amount\"\n          - columnheader \"Status\"\n      - rowgroup:\n        - 'row \"Oct 15, 2026, 6:31 PM PDT Transfer from Everyday Checking to Rainy Day Savings Transfer From Everyday Checking (\u2022\u2022\u2022\u2022 1042) To Rainy Day Savings (\u2022\u2022\u2022\u2022 7781) Moved between accounts: \u2212$1.01 Completed\"':\n          - cell \"Oct 15, 2026, 6:31 PM PDT\":\n            - time: Oct 15, 2026, 6:31 PM PDT\n          - cell \"Transfer from Everyday Checking to Rainy Day Savings\"\n          - cell \"Transfer\"\n          - cell \"From Everyday Checking (\u2022\u2022\u2022\u2022 1042) To Rainy Day Savings (\u2022\u2022\u2022\u2022 7781)\"\n          - 'cell \"Moved between accounts: \u2212$1.01\"'\n          - cell \"Completed\"\n        - 'row \"Oct 15, 2026, 6:31 PM PDT Transfer from Everyday Checking to Rainy Day Savings Transfer From Everyday Checking (\u2022\u2022\u2022\u2022 1042) To Rainy Day Savings (\u2022\u2022\u2022\u2022 7781) Moved between accounts: $0.00 Completed\"':\n          - cell \"Oct 15, 2026, 6:31 PM PDT\":\n            - time: Oct 15, 2026, 6:31 PM PDT\n          - cell \"Transfer from Everyday Checking to Rainy Day Savings\"\n          - cell \"Transfer\"\n          - cell \"From Everyday Checking (\u2022\u2022\u2022\u2022 1042) To Rainy Day Savings (\u2022\u2022\u2022\u2022 7781)\"\n          - 'cell \"Moved between accounts: $0.00\"'\n          - cell \"Completed\"\n        - 'row \"Oct 15, 2026, 6:31 PM PDT Transfer from Everyday Checking to Rainy Day Savings Transfer From Everyday Checking (\u2022\u2022\u2022\u2022 1042) To Rainy Day Savings (\u2022\u2022\u2022\u2022 7781) Moved between accounts: $1.00 Completed\"':\n          - cell \"Oct 15, 2026, 6:31 PM PDT\":\n            - time: Oct 15, 2026, 6:31 PM PDT\n          - cell \"Transfer from Everyday Checking to Rainy Day Savings\"\n          - cell \"Transfer\"\n          - cell \"From Everyday Checking (\u2022\u2022\u2022\u2022 1042) To Rainy Day Savings (\u2022\u2022\u2022\u2022 7781)\"\n          - 'cell \"Moved between accounts: $1.00\"'\n          - cell \"Completed\"\n        - 'row \"Oct 15, 2026, 6:26 PM PDT Transfer from Everyday Checking to Rainy Day Savings Transfer From Everyday Checking (\u2022\u2022\u2022\u2022 1042) To Rainy Day Savings (\u2022\u2022\u2022\u2022 7781) Moved between accounts: $0.01 Completed\"':\n          - cell \"Oct 15, 2026, 6:26 PM PDT\":\n            - time: Oct 15, 2026, 6:26 PM PDT\n          - cell \"Transfer from Everyday Checking to Rainy Day Savings\"\n          - cell \"Transfer\"\n          - cell \"From Everyday Checking (\u2022\u2022\u2022\u2022 1042) To Rainy Day Savings (\u2022\u2022\u2022\u2022 7781)\"\n          - 'cell \"Moved between accounts: $0.01\"'\n          - cell \"Completed\"\n        - 'row \"Oct 15, 2026, 6:26 PM PDT Transfer from Everyday Checking to Rainy Day Savings Transfer From Everyday Checking (\u2022\u2022\u2022\u2022 1042) To Rainy Day Savings (\u2022\u2022\u2022\u2022 7781) Moved between accounts: \u2212$1.01 Completed\"':\n          - cell \"Oct 15, 2026, 6:26 PM PDT\":\n            - time: Oct 15, 2026, 6:26 PM PDT\n          - cell \"Transfer from Everyday Checking to Rainy Day Savings\"\n          - cell \"Transfer\"\n          - cell \"From Everyday Checking (\u2022\u2022\u2022\u2022 1042) To Rainy Day Savings (\u2022\u2022\u2022\u2022 7781)\"\n          - 'cell \"Moved between accounts: \u2212$1.01\"'\n          - cell \"Completed\"\n        - 'row \"Oct 15, 2026, 6:26 PM PDT Transfer from Everyday Checking to Rainy Day Savings Transfer From Everyday Checking (\u2022\u2022\u2022\u2022 1042) To Rainy Day Savings (\u2022\u2022\u2022\u2022 7781) Moved between accounts: $0.00 Completed\"':\n          - cell \"Oct 15, 2026, 6:26 PM PDT\":\n            - time: Oct 15, 2026, 6:26 PM PDT\n          - cell \"Transfer from Everyday Checking to Rainy Day Savings\"\n          - cell \"Transfer\"\n          - cell \"From Everyday Checking (\u2022\u2022\u2022\u2022 1042) To Rainy Day Savings (\u2022\u2022\u2022\u2022 7781)\"\n          - 'cell \"Moved between accounts: $0.00\"'\n          - cell \"Completed\"\n        - 'row \"Oct 15, 2026, 6:26 PM PDT Transfer from Everyday Checking to Rainy Day Savings Transfer From Everyday Checking (\u2022\u2022\u2022\u2022 1042) To Rainy Day Savings (\u2022\u2022\u2022\u2022 7781) Moved between accounts: $1.00 Completed\"':\n          - cell \"Oct 15, 2026, 6:26 PM PDT\":\n            - time: Oct 15, 2026, 6:26 PM PDT\n          - cell \"Transfer from Everyday Checking to Rainy Day Savings\"\n          - cell \"Transfer\"\n          - cell \"From Everyday Checking (\u2022\u2022\u2022\u2022 1042) To Rainy Day Savings (\u2022\u2022\u2022\u2022 7781)\"\n          - 'cell \"Moved between accounts: $1.00\"'\n          - cell \"Completed\"\n        - 'row \"Oct 15, 2026, 5:52 PM PDT Transfer from Everyday Checking to Rainy Day Savings Transfer From Everyday Checking (\u2022\u2022\u2022\u2022 1042) To Rainy Day Savings (\u2022\u2022\u2022\u2022 7781) Moved between accounts: $0.01 Completed\"':\n          - cell \"Oct 15, 2026, 5:52 PM PDT\":\n            - time: Oct 15, 2026, 5:52 PM PDT\n          - cell \"Transfer from Everyday Checking to Rainy Day Savings\"\n          - cell \"Transfer\"\n          - cell \"From Everyday Checking (\u2022\u2022\u2022\u2022 1042) To Rainy Day Savings (\u2022\u2022\u2022\u2022 7781)\"\n          - 'cell \"Moved between accounts: $0.01\"'\n          - cell \"Completed\"\n        - 'row \"Oct 15, 2026, 5:51 PM PDT Transfer from Everyday Checking to Rainy Day Savings Transfer From Everyday Checking (\u2022\u2022\u2022\u2022 1042) To Rainy Day Savings (\u2022\u2022\u2022\u2022 7781) Moved between accounts: $1,004,368.75 Completed\"':\n          - cell \"Oct 15, 2026, 5:51 PM PDT\":\n            - time: Oct 15, 2026, 5:51 PM PDT\n          - cell \"Transfer from Everyday Checking to Rainy Day Savings\"\n          - cell \"Transfer\"\n          - cell \"From Everyday Checking (\u2022\u2022\u2022\u2022 1042) To Rainy Day Savings (\u2022\u2022\u2022\u2022 7781)\"\n          - 'cell \"Moved between accounts: $1,004,368.75\"'\n          - cell \"Completed\"\n        - 'row \"Oct 15, 2026, 5:51 PM PDT Transfer from Everyday Checking to Rainy Day Savings Transfer From Everyday Checking (\u2022\u2022\u2022\u2022 1042) To Rainy Day Savings (\u2022\u2022\u2022\u2022 7781) Moved between accounts: $0.00 Completed\"':\n          - cell \"Oct 15, 2026, 5:51 PM PDT\":\n            - time: Oct 15, 2026, 5:51 PM PDT\n          - cell \"Transfer from Everyday Checking to Rainy Day Savings\"\n          - cell \"Transfer\"\n          - cell \"From Everyday Checking (\u2022\u2022\u2022\u2022 1042) To Rainy Day Savings (\u2022\u2022\u2022\u2022 7781)\"\n          - 'cell \"Moved between accounts: $0.00\"'\n          - cell \"Completed\"\n        - 'row \"Oct 15, 2026, 5:51 PM PDT Transfer from Everyday Checking to Rainy Day Savings Transfer From Everyday Checking (\u2022\u2022\u2022\u2022 1042) To Rainy Day Savings (\u2022\u2022\u2022\u2022 7781) Moved between accounts: $1.00 Completed\"':\n          - cell \"Oct 15, 2026, 5:51 PM PDT\":\n            - time: Oct 15, 2026, 5:51 PM PDT\n          - cell \"Transfer from Everyday Checking to Rainy Day Savings\"\n          - cell \"Transfer\"\n          - cell \"From Everyday Checking (\u2022\u2022\u2022\u2022 1042) To Rainy Day Savings (\u2022\u2022\u2022\u2022 7781)\"\n          - 'cell \"Moved between accounts: $1.00\"'\n          - cell \"Completed\"\n        - 'row \"Sep 3, 2025, 7:50 AM PDT Returned demo deposit Deposit Rainy Day Savings (\u2022\u2022\u2022\u2022 7781) No change: $0.00 Failed\"':\n          - cell \"Sep 3, 2025, 7:50 AM PDT\":\n            - time: Sep 3, 2025, 7:50 AM PDT\n          - cell \"Returned demo deposit\"\n          - cell \"Deposit\"\n          - cell \"Rainy Day Savings (\u2022\u2022\u2022\u2022 7781)\"\n          - 'cell \"No change: $0.00\"'\n          - cell \"Failed\"\n        - 'row \"Aug 8, 2025, 11:25 AM PDT Pending demo debit Withdrawal Everyday Checking (\u2022\u2022\u2022\u2022 1042) No change: $0.00 Pending\"':\n          - cell \"Aug 8, 2025, 11:25 AM PDT\":\n            - time: Aug 8, 2025, 11:25 AM PDT\n          - cell \"Pending demo debit\"\n          - cell \"Withdrawal\"\n          - cell \"Everyday Checking (\u2022\u2022\u2022\u2022 1042)\"\n          - 'cell \"No change: $0.00\"'\n          - cell \"Pending\"\n        - 'row \"Jul 19, 2025, 2:05 PM PDT Declined demo item Withdrawal Rainy Day Savings (\u2022\u2022\u2022\u2022 7781) No change: $0.00 Failed\"':\n          - cell \"Jul 19, 2025, 2:05 PM PDT\":\n            - time: Jul 19, 2025, 2:05 PM PDT\n          - cell \"Declined demo item\"\n          - cell \"Withdrawal\"\n          - cell \"Rainy Day Savings (\u2022\u2022\u2022\u2022 7781)\"\n          - 'cell \"No change: $0.00\"'\n          - cell \"Failed\"\n        - 'row \"Jul 2, 2025, 9:40 AM PDT Pending demo deposit Deposit Everyday Checking (\u2022\u2022\u2022\u2022 1042) No change: $0.00 Pending\"':\n          - cell \"Jul 2, 2025, 9:40 AM PDT\":\n            - time: Jul 2, 2025, 9:40 AM PDT\n          - cell \"Pending demo deposit\"\n          - cell \"Deposit\"\n          - cell \"Everyday Checking (\u2022\u2022\u2022\u2022 1042)\"\n          - 'cell \"No change: $0.00\"'\n          - cell \"Pending\"\n        - 'row \"Jun 15, 2025, 12:00 PM PDT Annual bonus Deposit Everyday Checking (\u2022\u2022\u2022\u2022 1042) Money in: +$950.00 Completed\"':\n          - cell \"Jun 15, 2025, 12:00 PM PDT\":\n            - time: Jun 15, 2025, 12:00 PM PDT\n          - cell \"Annual bonus\"\n          - cell \"Deposit\"\n          - cell \"Everyday Checking (\u2022\u2022\u2022\u2022 1042)\"\n          - 'cell \"Money in: +$950.00\"'\n          - cell \"Completed\"\n        - 'row \"Apr 10, 2025, 8:20 AM PDT Move to checking Transfer From Rainy Day Savings (\u2022\u2022\u2022\u2022 7781) To Everyday Checking (\u2022\u2022\u2022\u2022 1042) Moved between accounts: $175.00 Completed\"':\n          - cell \"Apr 10, 2025, 8:20 AM PDT\":\n            - time: Apr 10, 2025, 8:20 AM PDT\n          - cell \"Move to checking\"\n          - cell \"Transfer\"\n          - cell \"From Rainy Day Savings (\u2022\u2022\u2022\u2022 7781) To Everyday Checking (\u2022\u2022\u2022\u2022 1042)\"\n          - 'cell \"Moved between accounts: $175.00\"'\n          - cell \"Completed\"\n        - 'row \"Mar 22, 2025, 12:10 PM PDT Demo home repair Withdrawal Rainy Day Savings (\u2022\u2022\u2022\u2022 7781) Money out: \u2212$300.00 Completed\"':\n          - cell \"Mar 22, 2025, 12:10 PM PDT\":\n            - time: Mar 22, 2025, 12:10 PM PDT\n          - cell \"Demo home repair\"\n          - cell \"Withdrawal\"\n          - cell \"Rainy Day Savings (\u2022\u2022\u2022\u2022 7781)\"\n          - 'cell \"Money out: \u2212$300.00\"'\n          - cell \"Completed\"\n        - 'row \"Mar 4, 2025, 6:45 PM PST Demo utilities Withdrawal Everyday Checking (\u2022\u2022\u2022\u2022 1042) Money out: \u2212$120.00 Completed\"':\n          - cell \"Mar 4, 2025, 6:45 PM PST\":\n            - time: Mar 4, 2025, 6:45 PM PST\n          - cell \"Demo utilities\"\n          - cell \"Withdrawal\"\n          - cell \"Everyday Checking (\u2022\u2022\u2022\u2022 1042)\"\n          - 'cell \"Money out: \u2212$120.00\"'\n          - cell \"Completed\"\n        - 'row \"Feb 14, 2025, 10:15 AM PST Monthly savings Transfer From Everyday Checking (\u2022\u2022\u2022\u2022 1042) To Rainy Day Savings (\u2022\u2022\u2022\u2022 7781) Moved between accounts: $250.00 Completed\"':\n          - cell \"Feb 14, 2025, 10:15 AM PST\":\n            - time: Feb 14, 2025, 10:15 AM PST\n          - cell \"Monthly savings\"\n          - cell \"Transfer\"\n          - cell \"From Everyday Checking (\u2022\u2022\u2022\u2022 1042) To Rainy Day Savings (\u2022\u2022\u2022\u2022 7781)\"\n          - 'cell \"Moved between accounts: $250.00\"'\n          - cell \"Completed\"\n        - 'row \"Feb 1, 2025, 8:00 AM PST Savings contribution Deposit Rainy Day Savings (\u2022\u2022\u2022\u2022 7781) Money in: +$500.00 Completed\"':\n          - cell \"Feb 1, 2025, 8:00 AM PST\":\n            - time: Feb 1, 2025, 8:00 AM PST\n          - cell \"Savings contribution\"\n          - cell \"Deposit\"\n          - cell \"Rainy Day Savings (\u2022\u2022\u2022\u2022 7781)\"\n          - 'cell \"Money in: +$500.00\"'\n          - cell \"Completed\"\n        - 'row \"Jan 18, 2025, 12:30 PM PST Demo groceries Withdrawal Everyday Checking (\u2022\u2022\u2022\u2022 1042) Money out: \u2212$85.25 Completed\"':\n          - cell \"Jan 18, 2025, 12:30 PM PST\":\n            - time: Jan 18, 2025, 12:30 PM PST\n          - cell \"Demo groceries\"\n          - cell \"Withdrawal\"\n          - cell \"Everyday Checking (\u2022\u2022\u2022\u2022 1042)\"\n          - 'cell \"Money out: \u2212$85.25\"'\n          - cell \"Completed\"\n        - 'row \"Jan 3, 2025, 9:00 AM PST Demo payroll Deposit Everyday Checking (\u2022\u2022\u2022\u2022 1042) Money in: +$1,200.00 Completed\"':\n          - cell \"Jan 3, 2025, 9:00 AM PST\":\n            - time: Jan 3, 2025, 9:00 AM PST\n          - cell \"Demo payroll\"\n          - cell \"Deposit\"\n          - cell \"Everyday Checking (\u2022\u2022\u2022\u2022 1042)\"\n          - 'cell \"Money in: +$1,200.00\"'\n          - cell \"Completed\"\n- contentinfo: DemoBank uses synthetic demo data only. Service online",
+      "evidence": [
+        "reports\\transactions-empty-fail.png"
+      ],
+      "error": "Locator expected to be visible\nActual value: None\nError: element(s) not found \nCall log:\n  - Expect \"to_be_visible\" get_by_text(\"No transactions match these filters\") with timeout 15000ms\n  - waiting for get_by_text(\"No transactions match these filters\")\n\nAria snapshot:\n- link \"Skip to main content\":\n  - /url: \"#main\"\n- banner:\n  - link \"DemoBank dashboard\":\n    - /url: /dashboard\n    - text: DemoBank\n  - navigation \"Main\":\n    - link \"Dashboard\":\n      - /url: /dashboard\n    - link \"Transactions\":\n      - /url: /transactions\n    - link \"Transfer\":\n      - /url: /transfer\n    - link \"Profile\":\n      - /url: /profile\n  - text: Signed in as Avery Demo\n  - button \"Log out\"\n- main:\n  - paragraph: History\n  - heading \"Transactions\" [level=1]\n  - form \"Filter transactions\":\n    - text: Account\n    - combobox \"Account\":\n      - option \"All accounts\" [selected]\n      - option \"Everyday Checking (\u2022\u2022\u2022\u2022 1042)\"\n      - option \"Rainy Day Savings (\u2022\u2022\u2022\u2022 7781)\"\n    - text: Type\n    - combobox \"Type\":\n      - option \"All types\" [selected]\n      - option \"Deposit\"\n      - option \"Withdrawal\"\n      - option \"Transfer\"\n    - text: Status\n    - combobox \"Status\":\n      - option \"All statuses\" [selected]\n      - option \"Completed\"\n      - option \"Pending\"\n      - option \"Failed\"\n    - text: Start date\n    - textbox \"Start date\"\n    - text: End date\n    - textbox \"End date\": 2099-01-02\n    - paragraph: Start and end dates are inclusive and use Pacific Time.\n    - button \"Apply filters\"\n    - button \"Clear filters\"\n  - region \"Filtered results\":\n    - heading \"Filtered results\" [level=2]\n    - status: Showing 23 transactions\n    - table \"Filtered transaction history\":\n      - caption: Filtered transaction history\n      - rowgroup:\n        - row \"Date & time Description Type Account Amount Status\":\n          - columnheader \"Date & time\"\n          - columnheader \"Description\"\n          - columnheader \"Type\"\n          - columnheader \"Account\"\n          - columnheader \"Amount\"\n          - columnheader \"Status\"\n      - rowgroup:\n        - 'row \"Oct 15, 2026, 6:31 PM PDT Transfer from Everyday Checking to Rainy Day Savings Transfer From Everyday Checking (\u2022\u2022\u2022\u2022 1042) To Rainy Day Savings (\u2022\u2022\u2022\u2022 7781) Moved between accounts: \u2212$1.01 Completed\"':\n          - cell \"Oct 15, 2026, 6:31 PM PDT\":\n            - time: Oct 15, 2026, 6:31 PM PDT\n          - cell \"Transfer from Everyday Checking to Rainy Day Savings\"\n          - cell \"Transfer\"\n          - cell \"From Everyday Checking (\u2022\u2022\u2022\u2022 1042) To Rainy Day Savings (\u2022\u2022\u2022\u2022 7781)\"\n          - 'cell \"Moved between accounts: \u2212$1.01\"'\n          - cell \"Completed\"\n        - 'row \"Oct 15, 2026, 6:31 PM PDT Transfer from Everyday Checking to Rainy Day Savings Transfer From Everyday Checking (\u2022\u2022\u2022\u2022 1042) To Rainy Day Savings (\u2022\u2022\u2022\u2022 7781) Moved between accounts: $0.00 Completed\"':\n          - cell \"Oct 15, 2026, 6:31 PM PDT\":\n            - time: Oct 15, 2026, 6:31 PM PDT\n          - cell \"Transfer from Everyday Checking to Rainy Day Savings\"\n          - cell \"Transfer\"\n          - cell \"From Everyday Checking (\u2022\u2022\u2022\u2022 1042) To Rainy Day Savings (\u2022\u2022\u2022\u2022 7781)\"\n          - 'cell \"Moved between accounts: $0.00\"'\n          - cell \"Completed\"\n        - 'row \"Oct 15, 2026, 6:31 PM PDT Transfer from Everyday Checking to Rainy Day Savings Transfer From Everyday Checking (\u2022\u2022\u2022\u2022 1042) To Rainy Day Savings (\u2022\u2022\u2022\u2022 7781) Moved between accounts: $1.00 Completed\"':\n          - cell \"Oct 15, 2026, 6:31 PM PDT\":\n            - time: Oct 15, 2026, 6:31 PM PDT\n          - cell \"Transfer from Everyday Checking to Rainy Day Savings\"\n          - cell \"Transfer\"\n          - cell \"From Everyday Checking (\u2022\u2022\u2022\u2022 1042) To Rainy Day Savings (\u2022\u2022\u2022\u2022 7781)\"\n          - 'cell \"Moved between accounts: $1.00\"'\n          - cell \"Completed\"\n        - 'row \"Oct 15, 2026, 6:26 PM PDT Transfer from Everyday Checking to Rainy Day Savings Transfer From Everyday Checking (\u2022\u2022\u2022\u2022 1042) To Rainy Day Savings (\u2022\u2022\u2022\u2022 7781) Moved between accounts: $0.01 Completed\"':\n          - cell \"Oct 15, 2026, 6:26 PM PDT\":\n            - time: Oct 15, 2026, 6:26 PM PDT\n          - cell \"Transfer from Everyday Checking to Rainy Day Savings\"\n          - cell \"Transfer\"\n          - cell \"From Everyday Checking (\u2022\u2022\u2022\u2022 1042) To Rainy Day Savings (\u2022\u2022\u2022\u2022 7781)\"\n          - 'cell \"Moved between accounts: $0.01\"'\n          - cell \"Completed\"\n        - 'row \"Oct 15, 2026, 6:26 PM PDT Transfer from Everyday Checking to Rainy Day Savings Transfer From Everyday Checking (\u2022\u2022\u2022\u2022 1042) To Rainy Day Savings (\u2022\u2022\u2022\u2022 7781) Moved between accounts: \u2212$1.01 Completed\"':\n          - cell \"Oct 15, 2026, 6:26 PM PDT\":\n            - time: Oct 15, 2026, 6:26 PM PDT\n          - cell \"Transfer from Everyday Checking to Rainy Day Savings\"\n          - cell \"Transfer\"\n          - cell \"From Everyday Checking (\u2022\u2022\u2022\u2022 1042) To Rainy Day Savings (\u2022\u2022\u2022\u2022 7781)\"\n          - 'cell \"Moved between accounts: \u2212$1.01\"'\n          - cell \"Completed\"\n        - 'row \"Oct 15, 2026, 6:26 PM PDT Transfer from Everyday Checking to Rainy Day Savings Transfer From Everyday Checking (\u2022\u2022\u2022\u2022 1042) To Rainy Day Savings (\u2022\u2022\u2022\u2022 7781) Moved between accounts: $0.00 Completed\"':\n          - cell \"Oct 15, 2026, 6:26 PM PDT\":\n            - time: Oct 15, 2026, 6:26 PM PDT\n          - cell \"Transfer from Everyday Checking to Rainy Day Savings\"\n          - cell \"Transfer\"\n          - cell \"From Everyday Checking (\u2022\u2022\u2022\u2022 1042) To Rainy Day Savings (\u2022\u2022\u2022\u2022 7781)\"\n          - 'cell \"Moved between accounts: $0.00\"'\n          - cell \"Completed\"\n        - 'row \"Oct 15, 2026, 6:26 PM PDT Transfer from Everyday Checking to Rainy Day Savings Transfer From Everyday Checking (\u2022\u2022\u2022\u2022 1042) To Rainy Day Savings (\u2022\u2022\u2022\u2022 7781) Moved between accounts: $1.00 Completed\"':\n          - cell \"Oct 15, 2026, 6:26 PM PDT\":\n            - time: Oct 15, 2026, 6:26 PM PDT\n          - cell \"Transfer from Everyday Checking to Rainy Day Savings\"\n          - cell \"Transfer\"\n          - cell \"From Everyday Checking (\u2022\u2022\u2022\u2022 1042) To Rainy Day Savings (\u2022\u2022\u2022\u2022 7781)\"\n          - 'cell \"Moved between accounts: $1.00\"'\n          - cell \"Completed\"\n        - 'row \"Oct 15, 2026, 5:52 PM PDT Transfer from Everyday Checking to Rainy Day Savings Transfer From Everyday Checking (\u2022\u2022\u2022\u2022 1042) To Rainy Day Savings (\u2022\u2022\u2022\u2022 7781) Moved between accounts: $0.01 Completed\"':\n          - cell \"Oct 15, 2026, 5:52 PM PDT\":\n            - time: Oct 15, 2026, 5:52 PM PDT\n          - cell \"Transfer from Everyday Checking to Rainy Day Savings\"\n          - cell \"Transfer\"\n          - cell \"From Everyday Checking (\u2022\u2022\u2022\u2022 1042) To Rainy Day Savings (\u2022\u2022\u2022\u2022 7781)\"\n          - 'cell \"Moved between accounts: $0.01\"'\n          - cell \"Completed\"\n        - 'row \"Oct 15, 2026, 5:51 PM PDT Transfer from Everyday Checking to Rainy Day Savings Transfer From Everyday Checking (\u2022\u2022\u2022\u2022 1042) To Rainy Day Savings (\u2022\u2022\u2022\u2022 7781) Moved between accounts: $1,004,368.75 Completed\"':\n          - cell \"Oct 15, 2026, 5:51 PM PDT\":\n            - time: Oct 15, 2026, 5:51 PM PDT\n          - cell \"Transfer from Everyday Checking to Rainy Day Savings\"\n          - cell \"Transfer\"\n          - cell \"From Everyday Checking (\u2022\u2022\u2022\u2022 1042) To Rainy Day Savings (\u2022\u2022\u2022\u2022 7781)\"\n          - 'cell \"Moved between accounts: $1,004,368.75\"'\n          - cell \"Completed\"\n        - 'row \"Oct 15, 2026, 5:51 PM PDT Transfer from Everyday Checking to Rainy Day Savings Transfer From Everyday Checking (\u2022\u2022\u2022\u2022 1042) To Rainy Day Savings (\u2022\u2022\u2022\u2022 7781) Moved between accounts: $0.00 Completed\"':\n          - cell \"Oct 15, 2026, 5:51 PM PDT\":\n            - time: Oct 15, 2026, 5:51 PM PDT\n          - cell \"Transfer from Everyday Checking to Rainy Day Savings\"\n          - cell \"Transfer\"\n          - cell \"From Everyday Checking (\u2022\u2022\u2022\u2022 1042) To Rainy Day Savings (\u2022\u2022\u2022\u2022 7781)\"\n          - 'cell \"Moved between accounts: $0.00\"'\n          - cell \"Completed\"\n        - 'row \"Oct 15, 2026, 5:51 PM PDT Transfer from Everyday Checking to Rainy Day Savings Transfer From Everyday Checking (\u2022\u2022\u2022\u2022 1042) To Rainy Day Savings (\u2022\u2022\u2022\u2022 7781) Moved between accounts: $1.00 Completed\"':\n          - cell \"Oct 15, 2026, 5:51 PM PDT\":\n            - time: Oct 15, 2026, 5:51 PM PDT\n          - cell \"Transfer from Everyday Checking to Rainy Day Savings\"\n          - cell \"Transfer\"\n          - cell \"From Everyday Checking (\u2022\u2022\u2022\u2022 1042) To Rainy Day Savings (\u2022\u2022\u2022\u2022 7781)\"\n          - 'cell \"Moved between accounts: $1.00\"'\n          - cell \"Completed\"\n        - 'row \"Sep 3, 2025, 7:50 AM PDT Returned demo deposit Deposit Rainy Day Savings (\u2022\u2022\u2022\u2022 7781) No change: $0.00 Failed\"':\n          - cell \"Sep 3, 2025, 7:50 AM PDT\":\n            - time: Sep 3, 2025, 7:50 AM PDT\n          - cell \"Returned demo deposit\"\n          - cell \"Deposit\"\n          - cell \"Rainy Day Savings (\u2022\u2022\u2022\u2022 7781)\"\n          - 'cell \"No change: $0.00\"'\n          - cell \"Failed\"\n        - 'row \"Aug 8, 2025, 11:25 AM PDT Pending demo debit Withdrawal Everyday Checking (\u2022\u2022\u2022\u2022 1042) No change: $0.00 Pending\"':\n          - cell \"Aug 8, 2025, 11:25 AM PDT\":\n            - time: Aug 8, 2025, 11:25 AM PDT\n          - cell \"Pending demo debit\"\n          - cell \"Withdrawal\"\n          - cell \"Everyday Checking (\u2022\u2022\u2022\u2022 1042)\"\n          - 'cell \"No change: $0.00\"'\n          - cell \"Pending\"\n        - 'row \"Jul 19, 2025, 2:05 PM PDT Declined demo item Withdrawal Rainy Day Savings (\u2022\u2022\u2022\u2022 7781) No change: $0.00 Failed\"':\n          - cell \"Jul 19, 2025, 2:05 PM PDT\":\n            - time: Jul 19, 2025, 2:05 PM PDT\n          - cell \"Declined demo item\"\n          - cell \"Withdrawal\"\n          - cell \"Rainy Day Savings (\u2022\u2022\u2022\u2022 7781)\"\n          - 'cell \"No change: $0.00\"'\n          - cell \"Failed\"\n        - 'row \"Jul 2, 2025, 9:40 AM PDT Pending demo deposit Deposit Everyday Checking (\u2022\u2022\u2022\u2022 1042) No change: $0.00 Pending\"':\n          - cell \"Jul 2, 2025, 9:40 AM PDT\":\n            - time: Jul 2, 2025, 9:40 AM PDT\n          - cell \"Pending demo deposit\"\n          - cell \"Deposit\"\n          - cell \"Everyday Checking (\u2022\u2022\u2022\u2022 1042)\"\n          - 'cell \"No change: $0.00\"'\n          - cell \"Pending\"\n        - 'row \"Jun 15, 2025, 12:00 PM PDT Annual bonus Deposit Everyday Checking (\u2022\u2022\u2022\u2022 1042) Money in: +$950.00 Completed\"':\n          - cell \"Jun 15, 2025, 12:00 PM PDT\":\n            - time: Jun 15, 2025, 12:00 PM PDT\n          - cell \"Annual bonus\"\n          - cell \"Deposit\"\n          - cell \"Everyday Checking (\u2022\u2022\u2022\u2022 1042)\"\n          - 'cell \"Money in: +$950.00\"'\n          - cell \"Completed\"\n        - 'row \"Apr 10, 2025, 8:20 AM PDT Move to checking Transfer From Rainy Day Savings (\u2022\u2022\u2022\u2022 7781) To Everyday Checking (\u2022\u2022\u2022\u2022 1042) Moved between accounts: $175.00 Completed\"':\n          - cell \"Apr 10, 2025, 8:20 AM PDT\":\n            - time: Apr 10, 2025, 8:20 AM PDT\n          - cell \"Move to checking\"\n          - cell \"Transfer\"\n          - cell \"From Rainy Day Savings (\u2022\u2022\u2022\u2022 7781) To Everyday Checking (\u2022\u2022\u2022\u2022 1042)\"\n          - 'cell \"Moved between accounts: $175.00\"'\n          - cell \"Completed\"\n        - 'row \"Mar 22, 2025, 12:10 PM PDT Demo home repair Withdrawal Rainy Day Savings (\u2022\u2022\u2022\u2022 7781) Money out: \u2212$300.00 Completed\"':\n          - cell \"Mar 22, 2025, 12:10 PM PDT\":\n            - time: Mar 22, 2025, 12:10 PM PDT\n          - cell \"Demo home repair\"\n          - cell \"Withdrawal\"\n          - cell \"Rainy Day Savings (\u2022\u2022\u2022\u2022 7781)\"\n          - 'cell \"Money out: \u2212$300.00\"'\n          - cell \"Completed\"\n        - 'row \"Mar 4, 2025, 6:45 PM PST Demo utilities Withdrawal Everyday Checking (\u2022\u2022\u2022\u2022 1042) Money out: \u2212$120.00 Completed\"':\n          - cell \"Mar 4, 2025, 6:45 PM PST\":\n            - time: Mar 4, 2025, 6:45 PM PST\n          - cell \"Demo utilities\"\n          - cell \"Withdrawal\"\n          - cell \"Everyday Checking (\u2022\u2022\u2022\u2022 1042)\"\n          - 'cell \"Money out: \u2212$120.00\"'\n          - cell \"Completed\"\n        - 'row \"Feb 14, 2025, 10:15 AM PST Monthly savings Transfer From Everyday Checking (\u2022\u2022\u2022\u2022 1042) To Rainy Day Savings (\u2022\u2022\u2022\u2022 7781) Moved between accounts: $250.00 Completed\"':\n          - cell \"Feb 14, 2025, 10:15 AM PST\":\n            - time: Feb 14, 2025, 10:15 AM PST\n          - cell \"Monthly savings\"\n          - cell \"Transfer\"\n          - cell \"From Everyday Checking (\u2022\u2022\u2022\u2022 1042) To Rainy Day Savings (\u2022\u2022\u2022\u2022 7781)\"\n          - 'cell \"Moved between accounts: $250.00\"'\n          - cell \"Completed\"\n        - 'row \"Feb 1, 2025, 8:00 AM PST Savings contribution Deposit Rainy Day Savings (\u2022\u2022\u2022\u2022 7781) Money in: +$500.00 Completed\"':\n          - cell \"Feb 1, 2025, 8:00 AM PST\":\n            - time: Feb 1, 2025, 8:00 AM PST\n          - cell \"Savings contribution\"\n          - cell \"Deposit\"\n          - cell \"Rainy Day Savings (\u2022\u2022\u2022\u2022 7781)\"\n          - 'cell \"Money in: +$500.00\"'\n          - cell \"Completed\"\n        - 'row \"Jan 18, 2025, 12:30 PM PST Demo groceries Withdrawal Everyday Checking (\u2022\u2022\u2022\u2022 1042) Money out: \u2212$85.25 Completed\"':\n          - cell \"Jan 18, 2025, 12:30 PM PST\":\n            - time: Jan 18, 2025, 12:30 PM PST\n          - cell \"Demo groceries\"\n          - cell \"Withdrawal\"\n          - cell \"Everyday Checking (\u2022\u2022\u2022\u2022 1042)\"\n          - 'cell \"Money out: \u2212$85.25\"'\n          - cell \"Completed\"\n        - 'row \"Jan 3, 2025, 9:00 AM PST Demo payroll Deposit Everyday Checking (\u2022\u2022\u2022\u2022 1042) Money in: +$1,200.00 Completed\"':\n          - cell \"Jan 3, 2025, 9:00 AM PST\":\n            - time: Jan 3, 2025, 9:00 AM PST\n          - cell \"Demo payroll\"\n          - cell \"Deposit\"\n          - cell \"Everyday Checking (\u2022\u2022\u2022\u2022 1042)\"\n          - 'cell \"Money in: +$1,200.00\"'\n          - cell \"Completed\"\n- contentinfo: DemoBank uses synthetic demo data only. Service online"
+    },
+    {
+      "requirement_id": "REQ-PROFILE-01",
+      "verdict": "passed",
+      "title": "Profile shows synthetic masked details",
+      "steps": [
+        "Open Profile",
+        "Verify masked email and no secrets"
+      ],
+      "expected": "Display name and masked email only.",
+      "observed": "name=Avery Demo, email=a***@example.test",
+      "evidence": [
+        "reports\\profile.png"
+      ],
+      "error": null
+    },
+    {
+      "requirement_id": "REQ-ACCESS-03",
+      "verdict": "passed",
+      "title": "Logout clears session and blocks dashboard",
+      "steps": [
+        "Log out from header",
+        "Navigate to /dashboard directly"
+      ],
+      "expected": "Landing page after logout; /dashboard requires demo entry.",
+      "observed": "URL http://localhost:5173/, landing=True",
+      "evidence": [
+        "reports\\logout-guard.png"
+      ],
+      "error": null
+    },
+    {
+      "requirement_id": "REQ-UI-01",
+      "verdict": "passed",
+      "title": "Validation errors shown for invalid input",
+      "steps": [
+        "Re-enter demo",
+        "Submit transfer with empty amount",
+        "Look for field error"
+      ],
+      "expected": "Clear validation message near amount field.",
+      "observed": "amount-error visible.",
+      "evidence": [
+        "reports\\ui-validation.png"
+      ],
+      "error": null
+    },
+    {
+      "requirement_id": "REQ-UI-02",
+      "verdict": "unverified",
+      "title": "Transfer submit shows in-flight state",
+      "steps": [
+        "Observe submit button disabled or loading label during transfer submit"
+      ],
+      "expected": "Loading/disabled submit while request in flight.",
+      "observed": "Could not observe loading state (too fast).",
+      "evidence": [
+        "reports\\ui-loading.png"
+      ],
+      "error": null
+    },
+    {
+      "requirement_id": "1",
+      "verdict": "unverified",
+      "title": "Not covered by automated suite",
+      "steps": [],
+      "expected": "See PRD.",
+      "observed": "No automated check mapped.",
+      "evidence": [],
+      "error": null
+    },
+    {
+      "requirement_id": "10",
+      "verdict": "unverified",
+      "title": "Not covered by automated suite",
+      "steps": [],
+      "expected": "See PRD.",
+      "observed": "No automated check mapped.",
+      "evidence": [],
+      "error": null
+    },
+    {
+      "requirement_id": "100",
+      "verdict": "unverified",
+      "title": "Not covered by automated suite",
+      "steps": [],
+      "expected": "See PRD.",
+      "observed": "No automated check mapped.",
+      "evidence": [],
+      "error": null
+    },
+    {
+      "requirement_id": "101",
+      "verdict": "unverified",
+      "title": "Not covered by automated suite",
+      "steps": [],
+      "expected": "See PRD.",
+      "observed": "No automated check mapped.",
+      "evidence": [],
+      "error": null
+    },
+    {
+      "requirement_id": "102",
+      "verdict": "unverified",
+      "title": "Not covered by automated suite",
+      "steps": [],
+      "expected": "See PRD.",
+      "observed": "No automated check mapped.",
+      "evidence": [],
+      "error": null
+    },
+    {
+      "requirement_id": "103",
+      "verdict": "unverified",
+      "title": "Not covered by automated suite",
+      "steps": [],
+      "expected": "See PRD.",
+      "observed": "No automated check mapped.",
+      "evidence": [],
+      "error": null
+    },
+    {
+      "requirement_id": "104",
+      "verdict": "unverified",
+      "title": "Not covered by automated suite",
+      "steps": [],
+      "expected": "See PRD.",
+      "observed": "No automated check mapped.",
+      "evidence": [],
+      "error": null
+    },
+    {
+      "requirement_id": "105",
+      "verdict": "unverified",
+      "title": "Not covered by automated suite",
+      "steps": [],
+      "expected": "See PRD.",
+      "observed": "No automated check mapped.",
+      "evidence": [],
+      "error": null
+    },
+    {
+      "requirement_id": "106",
+      "verdict": "unverified",
+      "title": "Not covered by automated suite",
+      "steps": [],
+      "expected": "See PRD.",
+      "observed": "No automated check mapped.",
+      "evidence": [],
+      "error": null
+    },
+    {
+      "requirement_id": "107",
+      "verdict": "unverified",
+      "title": "Not covered by automated suite",
+      "steps": [],
+      "expected": "See PRD.",
+      "observed": "No automated check mapped.",
+      "evidence": [],
+      "error": null
+    },
+    {
+      "requirement_id": "108",
+      "verdict": "unverified",
+      "title": "Not covered by automated suite",
+      "steps": [],
+      "expected": "See PRD.",
+      "observed": "No automated check mapped.",
+      "evidence": [],
+      "error": null
+    },
+    {
+      "requirement_id": "109",
+      "verdict": "unverified",
+      "title": "Not covered by automated suite",
+      "steps": [],
+      "expected": "See PRD.",
+      "observed": "No automated check mapped.",
+      "evidence": [],
+      "error": null
+    },
+    {
+      "requirement_id": "11",
+      "verdict": "unverified",
+      "title": "Not covered by automated suite",
+      "steps": [],
+      "expected": "See PRD.",
+      "observed": "No automated check mapped.",
+      "evidence": [],
+      "error": null
+    },
+    {
+      "requirement_id": "110",
+      "verdict": "unverified",
+      "title": "Not covered by automated suite",
+      "steps": [],
+      "expected": "See PRD.",
+      "observed": "No automated check mapped.",
+      "evidence": [],
+      "error": null
+    },
+    {
+      "requirement_id": "111",
+      "verdict": "unverified",
+      "title": "Not covered by automated suite",
+      "steps": [],
+      "expected": "See PRD.",
+      "observed": "No automated check mapped.",
+      "evidence": [],
+      "error": null
+    },
+    {
+      "requirement_id": "112",
+      "verdict": "unverified",
+      "title": "Not covered by automated suite",
+      "steps": [],
+      "expected": "See PRD.",
+      "observed": "No automated check mapped.",
+      "evidence": [],
+      "error": null
+    },
+    {
+      "requirement_id": "113",
+      "verdict": "unverified",
+      "title": "Not covered by automated suite",
+      "steps": [],
+      "expected": "See PRD.",
+      "observed": "No automated check mapped.",
+      "evidence": [],
+      "error": null
+    },
+    {
+      "requirement_id": "114",
+      "verdict": "unverified",
+      "title": "Not covered by automated suite",
+      "steps": [],
+      "expected": "See PRD.",
+      "observed": "No automated check mapped.",
+      "evidence": [],
+      "error": null
+    },
+    {
+      "requirement_id": "115",
+      "verdict": "unverified",
+      "title": "Not covered by automated suite",
+      "steps": [],
+      "expected": "See PRD.",
+      "observed": "No automated check mapped.",
+      "evidence": [],
+      "error": null
+    },
+    {
+      "requirement_id": "116",
+      "verdict": "unverified",
+      "title": "Not covered by automated suite",
+      "steps": [],
+      "expected": "See PRD.",
+      "observed": "No automated check mapped.",
+      "evidence": [],
+      "error": null
+    },
+    {
+      "requirement_id": "117",
+      "verdict": "unverified",
+      "title": "Not covered by automated suite",
+      "steps": [],
+      "expected": "See PRD.",
+      "observed": "No automated check mapped.",
+      "evidence": [],
+      "error": null
+    },
+    {
+      "requirement_id": "118",
+      "verdict": "unverified",
+      "title": "Not covered by automated suite",
+      "steps": [],
+      "expected": "See PRD.",
+      "observed": "No automated check mapped.",
+      "evidence": [],
+      "error": null
+    },
+    {
+      "requirement_id": "119",
+      "verdict": "unverified",
+      "title": "Not covered by automated suite",
+      "steps": [],
+      "expected": "See PRD.",
+      "observed": "No automated check mapped.",
+      "evidence": [],
+      "error": null
+    },
+    {
+      "requirement_id": "12",
+      "verdict": "unverified",
+      "title": "Not covered by automated suite",
+      "steps": [],
+      "expected": "See PRD.",
+      "observed": "No automated check mapped.",
+      "evidence": [],
+      "error": null
+    },
+    {
+      "requirement_id": "120",
+      "verdict": "unverified",
+      "title": "Not covered by automated suite",
+      "steps": [],
+      "expected": "See PRD.",
+      "observed": "No automated check mapped.",
+      "evidence": [],
+      "error": null
+    },
+    {
+      "requirement_id": "121",
+      "verdict": "unverified",
+      "title": "Not covered by automated suite",
+      "steps": [],
+      "expected": "See PRD.",
+      "observed": "No automated check mapped.",
+      "evidence": [],
+      "error": null
+    },
+    {
+      "requirement_id": "122",
+      "verdict": "unverified",
+      "title": "Not covered by automated suite",
+      "steps": [],
+      "expected": "See PRD.",
+      "observed": "No automated check mapped.",
+      "evidence": [],
+      "error": null
+    },
+    {
+      "requirement_id": "123",
+      "verdict": "unverified",
+      "title": "Not covered by automated suite",
+      "steps": [],
+      "expected": "See PRD.",
+      "observed": "No automated check mapped.",
+      "evidence": [],
+      "error": null
+    },
+    {
+      "requirement_id": "124",
+      "verdict": "unverified",
+      "title": "Not covered by automated suite",
+      "steps": [],
+      "expected": "See PRD.",
+      "observed": "No automated check mapped.",
+      "evidence": [],
+      "error": null
+    },
+    {
+      "requirement_id": "125",
+      "verdict": "unverified",
+      "title": "Not covered by automated suite",
+      "steps": [],
+      "expected": "See PRD.",
+      "observed": "No automated check mapped.",
+      "evidence": [],
+      "error": null
+    },
+    {
+      "requirement_id": "13",
+      "verdict": "unverified",
+      "title": "Not covered by automated suite",
+      "steps": [],
+      "expected": "See PRD.",
+      "observed": "No automated check mapped.",
+      "evidence": [],
+      "error": null
+    },
+    {
+      "requirement_id": "14",
+      "verdict": "unverified",
+      "title": "Not covered by automated suite",
+      "steps": [],
+      "expected": "See PRD.",
+      "observed": "No automated check mapped.",
+      "evidence": [],
+      "error": null
+    },
+    {
+      "requirement_id": "15",
+      "verdict": "unverified",
+      "title": "Not covered by automated suite",
+      "steps": [],
+      "expected": "See PRD.",
+      "observed": "No automated check mapped.",
+      "evidence": [],
+      "error": null
+    },
+    {
+      "requirement_id": "16",
+      "verdict": "unverified",
+      "title": "Not covered by automated suite",
+      "steps": [],
+      "expected": "See PRD.",
+      "observed": "No automated check mapped.",
+      "evidence": [],
+      "error": null
+    },
+    {
+      "requirement_id": "17",
+      "verdict": "unverified",
+      "title": "Not covered by automated suite",
+      "steps": [],
+      "expected": "See PRD.",
+      "observed": "No automated check mapped.",
+      "evidence": [],
+      "error": null
+    },
+    {
+      "requirement_id": "18",
+      "verdict": "unverified",
+      "title": "Not covered by automated suite",
+      "steps": [],
+      "expected": "See PRD.",
+      "observed": "No automated check mapped.",
+      "evidence": [],
+      "error": null
+    },
+    {
+      "requirement_id": "19",
+      "verdict": "unverified",
+      "title": "Not covered by automated suite",
+      "steps": [],
+      "expected": "See PRD.",
+      "observed": "No automated check mapped.",
+      "evidence": [],
+      "error": null
+    },
+    {
+      "requirement_id": "2",
+      "verdict": "unverified",
+      "title": "Not covered by automated suite",
+      "steps": [],
+      "expected": "See PRD.",
+      "observed": "No automated check mapped.",
+      "evidence": [],
+      "error": null
+    },
+    {
+      "requirement_id": "20",
+      "verdict": "unverified",
+      "title": "Not covered by automated suite",
+      "steps": [],
+      "expected": "See PRD.",
+      "observed": "No automated check mapped.",
+      "evidence": [],
+      "error": null
+    },
+    {
+      "requirement_id": "21",
+      "verdict": "unverified",
+      "title": "Not covered by automated suite",
+      "steps": [],
+      "expected": "See PRD.",
+      "observed": "No automated check mapped.",
+      "evidence": [],
+      "error": null
+    },
+    {
+      "requirement_id": "22",
+      "verdict": "unverified",
+      "title": "Not covered by automated suite",
+      "steps": [],
+      "expected": "See PRD.",
+      "observed": "No automated check mapped.",
+      "evidence": [],
+      "error": null
+    },
+    {
+      "requirement_id": "23",
+      "verdict": "unverified",
+      "title": "Not covered by automated suite",
+      "steps": [],
+      "expected": "See PRD.",
+      "observed": "No automated check mapped.",
+      "evidence": [],
+      "error": null
+    },
+    {
+      "requirement_id": "24",
+      "verdict": "unverified",
+      "title": "Not covered by automated suite",
+      "steps": [],
+      "expected": "See PRD.",
+      "observed": "No automated check mapped.",
+      "evidence": [],
+      "error": null
+    },
+    {
+      "requirement_id": "25",
+      "verdict": "unverified",
+      "title": "Not covered by automated suite",
+      "steps": [],
+      "expected": "See PRD.",
+      "observed": "No automated check mapped.",
+      "evidence": [],
+      "error": null
+    },
+    {
+      "requirement_id": "26",
+      "verdict": "unverified",
+      "title": "Not covered by automated suite",
+      "steps": [],
+      "expected": "See PRD.",
+      "observed": "No automated check mapped.",
+      "evidence": [],
+      "error": null
+    },
+    {
+      "requirement_id": "27",
+      "verdict": "unverified",
+      "title": "Not covered by automated suite",
+      "steps": [],
+      "expected": "See PRD.",
+      "observed": "No automated check mapped.",
+      "evidence": [],
+      "error": null
+    },
+    {
+      "requirement_id": "28",
+      "verdict": "unverified",
+      "title": "Not covered by automated suite",
+      "steps": [],
+      "expected": "See PRD.",
+      "observed": "No automated check mapped.",
+      "evidence": [],
+      "error": null
+    },
+    {
+      "requirement_id": "29",
+      "verdict": "unverified",
+      "title": "Not covered by automated suite",
+      "steps": [],
+      "expected": "See PRD.",
+      "observed": "No automated check mapped.",
+      "evidence": [],
+      "error": null
+    },
+    {
+      "requirement_id": "3",
+      "verdict": "unverified",
+      "title": "Not covered by automated suite",
+      "steps": [],
+      "expected": "See PRD.",
+      "observed": "No automated check mapped.",
+      "evidence": [],
+      "error": null
+    },
+    {
+      "requirement_id": "30",
+      "verdict": "unverified",
+      "title": "Not covered by automated suite",
+      "steps": [],
+      "expected": "See PRD.",
+      "observed": "No automated check mapped.",
+      "evidence": [],
+      "error": null
+    },
+    {
+      "requirement_id": "31",
+      "verdict": "unverified",
+      "title": "Not covered by automated suite",
+      "steps": [],
+      "expected": "See PRD.",
+      "observed": "No automated check mapped.",
+      "evidence": [],
+      "error": null
+    },
+    {
+      "requirement_id": "32",
+      "verdict": "unverified",
+      "title": "Not covered by automated suite",
+      "steps": [],
+      "expected": "See PRD.",
+      "observed": "No automated check mapped.",
+      "evidence": [],
+      "error": null
+    },
+    {
+      "requirement_id": "33",
+      "verdict": "unverified",
+      "title": "Not covered by automated suite",
+      "steps": [],
+      "expected": "See PRD.",
+      "observed": "No automated check mapped.",
+      "evidence": [],
+      "error": null
+    },
+    {
+      "requirement_id": "34",
+      "verdict": "unverified",
+      "title": "Not covered by automated suite",
+      "steps": [],
+      "expected": "See PRD.",
+      "observed": "No automated check mapped.",
+      "evidence": [],
+      "error": null
+    },
+    {
+      "requirement_id": "35",
+      "verdict": "unverified",
+      "title": "Not covered by automated suite",
+      "steps": [],
+      "expected": "See PRD.",
+      "observed": "No automated check mapped.",
+      "evidence": [],
+      "error": null
+    },
+    {
+      "requirement_id": "36",
+      "verdict": "unverified",
+      "title": "Not covered by automated suite",
+      "steps": [],
+      "expected": "See PRD.",
+      "observed": "No automated check mapped.",
+      "evidence": [],
+      "error": null
+    },
+    {
+      "requirement_id": "37",
+      "verdict": "unverified",
+      "title": "Not covered by automated suite",
+      "steps": [],
+      "expected": "See PRD.",
+      "observed": "No automated check mapped.",
+      "evidence": [],
+      "error": null
+    },
+    {
+      "requirement_id": "38",
+      "verdict": "unverified",
+      "title": "Not covered by automated suite",
+      "steps": [],
+      "expected": "See PRD.",
+      "observed": "No automated check mapped.",
+      "evidence": [],
+      "error": null
+    },
+    {
+      "requirement_id": "39",
+      "verdict": "unverified",
+      "title": "Not covered by automated suite",
+      "steps": [],
+      "expected": "See PRD.",
+      "observed": "No automated check mapped.",
+      "evidence": [],
+      "error": null
+    },
+    {
+      "requirement_id": "4",
+      "verdict": "unverified",
+      "title": "Not covered by automated suite",
+      "steps": [],
+      "expected": "See PRD.",
+      "observed": "No automated check mapped.",
+      "evidence": [],
+      "error": null
+    },
+    {
+      "requirement_id": "40",
+      "verdict": "unverified",
+      "title": "Not covered by automated suite",
+      "steps": [],
+      "expected": "See PRD.",
+      "observed": "No automated check mapped.",
+      "evidence": [],
+      "error": null
+    },
+    {
+      "requirement_id": "41",
+      "verdict": "unverified",
+      "title": "Not covered by automated suite",
+      "steps": [],
+      "expected": "See PRD.",
+      "observed": "No automated check mapped.",
+      "evidence": [],
+      "error": null
+    },
+    {
+      "requirement_id": "42",
+      "verdict": "unverified",
+      "title": "Not covered by automated suite",
+      "steps": [],
+      "expected": "See PRD.",
+      "observed": "No automated check mapped.",
+      "evidence": [],
+      "error": null
+    },
+    {
+      "requirement_id": "43",
+      "verdict": "unverified",
+      "title": "Not covered by automated suite",
+      "steps": [],
+      "expected": "See PRD.",
+      "observed": "No automated check mapped.",
+      "evidence": [],
+      "error": null
+    },
+    {
+      "requirement_id": "44",
+      "verdict": "unverified",
+      "title": "Not covered by automated suite",
+      "steps": [],
+      "expected": "See PRD.",
+      "observed": "No automated check mapped.",
+      "evidence": [],
+      "error": null
+    },
+    {
+      "requirement_id": "45",
+      "verdict": "unverified",
+      "title": "Not covered by automated suite",
+      "steps": [],
+      "expected": "See PRD.",
+      "observed": "No automated check mapped.",
+      "evidence": [],
+      "error": null
+    },
+    {
+      "requirement_id": "46",
+      "verdict": "unverified",
+      "title": "Not covered by automated suite",
+      "steps": [],
+      "expected": "See PRD.",
+      "observed": "No automated check mapped.",
+      "evidence": [],
+      "error": null
+    },
+    {
+      "requirement_id": "47",
+      "verdict": "unverified",
+      "title": "Not covered by automated suite",
+      "steps": [],
+      "expected": "See PRD.",
+      "observed": "No automated check mapped.",
+      "evidence": [],
+      "error": null
+    },
+    {
+      "requirement_id": "48",
+      "verdict": "unverified",
+      "title": "Not covered by automated suite",
+      "steps": [],
+      "expected": "See PRD.",
+      "observed": "No automated check mapped.",
+      "evidence": [],
+      "error": null
+    },
+    {
+      "requirement_id": "49",
+      "verdict": "unverified",
+      "title": "Not covered by automated suite",
+      "steps": [],
+      "expected": "See PRD.",
+      "observed": "No automated check mapped.",
+      "evidence": [],
+      "error": null
+    },
+    {
+      "requirement_id": "5",
+      "verdict": "unverified",
+      "title": "Not covered by automated suite",
+      "steps": [],
+      "expected": "See PRD.",
+      "observed": "No automated check mapped.",
+      "evidence": [],
+      "error": null
+    },
+    {
+      "requirement_id": "50",
+      "verdict": "unverified",
+      "title": "Not covered by automated suite",
+      "steps": [],
+      "expected": "See PRD.",
+      "observed": "No automated check mapped.",
+      "evidence": [],
+      "error": null
+    },
+    {
+      "requirement_id": "51",
+      "verdict": "unverified",
+      "title": "Not covered by automated suite",
+      "steps": [],
+      "expected": "See PRD.",
+      "observed": "No automated check mapped.",
+      "evidence": [],
+      "error": null
+    },
+    {
+      "requirement_id": "52",
+      "verdict": "unverified",
+      "title": "Not covered by automated suite",
+      "steps": [],
+      "expected": "See PRD.",
+      "observed": "No automated check mapped.",
+      "evidence": [],
+      "error": null
+    },
+    {
+      "requirement_id": "53",
+      "verdict": "unverified",
+      "title": "Not covered by automated suite",
+      "steps": [],
+      "expected": "See PRD.",
+      "observed": "No automated check mapped.",
+      "evidence": [],
+      "error": null
+    },
+    {
+      "requirement_id": "54",
+      "verdict": "unverified",
+      "title": "Not covered by automated suite",
+      "steps": [],
+      "expected": "See PRD.",
+      "observed": "No automated check mapped.",
+      "evidence": [],
+      "error": null
+    },
+    {
+      "requirement_id": "55",
+      "verdict": "unverified",
+      "title": "Not covered by automated suite",
+      "steps": [],
+      "expected": "See PRD.",
+      "observed": "No automated check mapped.",
+      "evidence": [],
+      "error": null
+    },
+    {
+      "requirement_id": "56",
+      "verdict": "unverified",
+      "title": "Not covered by automated suite",
+      "steps": [],
+      "expected": "See PRD.",
+      "observed": "No automated check mapped.",
+      "evidence": [],
+      "error": null
+    },
+    {
+      "requirement_id": "57",
+      "verdict": "unverified",
+      "title": "Not covered by automated suite",
+      "steps": [],
+      "expected": "See PRD.",
+      "observed": "No automated check mapped.",
+      "evidence": [],
+      "error": null
+    },
+    {
+      "requirement_id": "58",
+      "verdict": "unverified",
+      "title": "Not covered by automated suite",
+      "steps": [],
+      "expected": "See PRD.",
+      "observed": "No automated check mapped.",
+      "evidence": [],
+      "error": null
+    },
+    {
+      "requirement_id": "59",
+      "verdict": "unverified",
+      "title": "Not covered by automated suite",
+      "steps": [],
+      "expected": "See PRD.",
+      "observed": "No automated check mapped.",
+      "evidence": [],
+      "error": null
+    },
+    {
+      "requirement_id": "6",
+      "verdict": "unverified",
+      "title": "Not covered by automated suite",
+      "steps": [],
+      "expected": "See PRD.",
+      "observed": "No automated check mapped.",
+      "evidence": [],
+      "error": null
+    },
+    {
+      "requirement_id": "60",
+      "verdict": "unverified",
+      "title": "Not covered by automated suite",
+      "steps": [],
+      "expected": "See PRD.",
+      "observed": "No automated check mapped.",
+      "evidence": [],
+      "error": null
+    },
+    {
+      "requirement_id": "61",
+      "verdict": "unverified",
+      "title": "Not covered by automated suite",
+      "steps": [],
+      "expected": "See PRD.",
+      "observed": "No automated check mapped.",
+      "evidence": [],
+      "error": null
+    },
+    {
+      "requirement_id": "62",
+      "verdict": "unverified",
+      "title": "Not covered by automated suite",
+      "steps": [],
+      "expected": "See PRD.",
+      "observed": "No automated check mapped.",
+      "evidence": [],
+      "error": null
+    },
+    {
+      "requirement_id": "63",
+      "verdict": "unverified",
+      "title": "Not covered by automated suite",
+      "steps": [],
+      "expected": "See PRD.",
+      "observed": "No automated check mapped.",
+      "evidence": [],
+      "error": null
+    },
+    {
+      "requirement_id": "64",
+      "verdict": "unverified",
+      "title": "Not covered by automated suite",
+      "steps": [],
+      "expected": "See PRD.",
+      "observed": "No automated check mapped.",
+      "evidence": [],
+      "error": null
+    },
+    {
+      "requirement_id": "65",
+      "verdict": "unverified",
+      "title": "Not covered by automated suite",
+      "steps": [],
+      "expected": "See PRD.",
+      "observed": "No automated check mapped.",
+      "evidence": [],
+      "error": null
+    },
+    {
+      "requirement_id": "66",
+      "verdict": "unverified",
+      "title": "Not covered by automated suite",
+      "steps": [],
+      "expected": "See PRD.",
+      "observed": "No automated check mapped.",
+      "evidence": [],
+      "error": null
+    },
+    {
+      "requirement_id": "67",
+      "verdict": "unverified",
+      "title": "Not covered by automated suite",
+      "steps": [],
+      "expected": "See PRD.",
+      "observed": "No automated check mapped.",
+      "evidence": [],
+      "error": null
+    },
+    {
+      "requirement_id": "68",
+      "verdict": "unverified",
+      "title": "Not covered by automated suite",
+      "steps": [],
+      "expected": "See PRD.",
+      "observed": "No automated check mapped.",
+      "evidence": [],
+      "error": null
+    },
+    {
+      "requirement_id": "69",
+      "verdict": "unverified",
+      "title": "Not covered by automated suite",
+      "steps": [],
+      "expected": "See PRD.",
+      "observed": "No automated check mapped.",
+      "evidence": [],
+      "error": null
+    },
+    {
+      "requirement_id": "7",
+      "verdict": "unverified",
+      "title": "Not covered by automated suite",
+      "steps": [],
+      "expected": "See PRD.",
+      "observed": "No automated check mapped.",
+      "evidence": [],
+      "error": null
+    },
+    {
+      "requirement_id": "70",
+      "verdict": "unverified",
+      "title": "Not covered by automated suite",
+      "steps": [],
+      "expected": "See PRD.",
+      "observed": "No automated check mapped.",
+      "evidence": [],
+      "error": null
+    },
+    {
+      "requirement_id": "71",
+      "verdict": "unverified",
+      "title": "Not covered by automated suite",
+      "steps": [],
+      "expected": "See PRD.",
+      "observed": "No automated check mapped.",
+      "evidence": [],
+      "error": null
+    },
+    {
+      "requirement_id": "72",
+      "verdict": "unverified",
+      "title": "Not covered by automated suite",
+      "steps": [],
+      "expected": "See PRD.",
+      "observed": "No automated check mapped.",
+      "evidence": [],
+      "error": null
+    },
+    {
+      "requirement_id": "73",
+      "verdict": "unverified",
+      "title": "Not covered by automated suite",
+      "steps": [],
+      "expected": "See PRD.",
+      "observed": "No automated check mapped.",
+      "evidence": [],
+      "error": null
+    },
+    {
+      "requirement_id": "74",
+      "verdict": "unverified",
+      "title": "Not covered by automated suite",
+      "steps": [],
+      "expected": "See PRD.",
+      "observed": "No automated check mapped.",
+      "evidence": [],
+      "error": null
+    },
+    {
+      "requirement_id": "75",
+      "verdict": "unverified",
+      "title": "Not covered by automated suite",
+      "steps": [],
+      "expected": "See PRD.",
+      "observed": "No automated check mapped.",
+      "evidence": [],
+      "error": null
+    },
+    {
+      "requirement_id": "76",
+      "verdict": "unverified",
+      "title": "Not covered by automated suite",
+      "steps": [],
+      "expected": "See PRD.",
+      "observed": "No automated check mapped.",
+      "evidence": [],
+      "error": null
+    },
+    {
+      "requirement_id": "77",
+      "verdict": "unverified",
+      "title": "Not covered by automated suite",
+      "steps": [],
+      "expected": "See PRD.",
+      "observed": "No automated check mapped.",
+      "evidence": [],
+      "error": null
+    },
+    {
+      "requirement_id": "78",
+      "verdict": "unverified",
+      "title": "Not covered by automated suite",
+      "steps": [],
+      "expected": "See PRD.",
+      "observed": "No automated check mapped.",
+      "evidence": [],
+      "error": null
+    },
+    {
+      "requirement_id": "79",
+      "verdict": "unverified",
+      "title": "Not covered by automated suite",
+      "steps": [],
+      "expected": "See PRD.",
+      "observed": "No automated check mapped.",
+      "evidence": [],
+      "error": null
+    },
+    {
+      "requirement_id": "8",
+      "verdict": "unverified",
+      "title": "Not covered by automated suite",
+      "steps": [],
+      "expected": "See PRD.",
+      "observed": "No automated check mapped.",
+      "evidence": [],
+      "error": null
+    },
+    {
+      "requirement_id": "80",
+      "verdict": "unverified",
+      "title": "Not covered by automated suite",
+      "steps": [],
+      "expected": "See PRD.",
+      "observed": "No automated check mapped.",
+      "evidence": [],
+      "error": null
+    },
+    {
+      "requirement_id": "81",
+      "verdict": "unverified",
+      "title": "Not covered by automated suite",
+      "steps": [],
+      "expected": "See PRD.",
+      "observed": "No automated check mapped.",
+      "evidence": [],
+      "error": null
+    },
+    {
+      "requirement_id": "82",
+      "verdict": "unverified",
+      "title": "Not covered by automated suite",
+      "steps": [],
+      "expected": "See PRD.",
+      "observed": "No automated check mapped.",
+      "evidence": [],
+      "error": null
+    },
+    {
+      "requirement_id": "83",
+      "verdict": "unverified",
+      "title": "Not covered by automated suite",
+      "steps": [],
+      "expected": "See PRD.",
+      "observed": "No automated check mapped.",
+      "evidence": [],
+      "error": null
+    },
+    {
+      "requirement_id": "84",
+      "verdict": "unverified",
+      "title": "Not covered by automated suite",
+      "steps": [],
+      "expected": "See PRD.",
+      "observed": "No automated check mapped.",
+      "evidence": [],
+      "error": null
+    },
+    {
+      "requirement_id": "85",
+      "verdict": "unverified",
+      "title": "Not covered by automated suite",
+      "steps": [],
+      "expected": "See PRD.",
+      "observed": "No automated check mapped.",
+      "evidence": [],
+      "error": null
+    },
+    {
+      "requirement_id": "86",
+      "verdict": "unverified",
+      "title": "Not covered by automated suite",
+      "steps": [],
+      "expected": "See PRD.",
+      "observed": "No automated check mapped.",
+      "evidence": [],
+      "error": null
+    },
+    {
+      "requirement_id": "87",
+      "verdict": "unverified",
+      "title": "Not covered by automated suite",
+      "steps": [],
+      "expected": "See PRD.",
+      "observed": "No automated check mapped.",
+      "evidence": [],
+      "error": null
+    },
+    {
+      "requirement_id": "88",
+      "verdict": "unverified",
+      "title": "Not covered by automated suite",
+      "steps": [],
+      "expected": "See PRD.",
+      "observed": "No automated check mapped.",
+      "evidence": [],
+      "error": null
+    },
+    {
+      "requirement_id": "89",
+      "verdict": "unverified",
+      "title": "Not covered by automated suite",
+      "steps": [],
+      "expected": "See PRD.",
+      "observed": "No automated check mapped.",
+      "evidence": [],
+      "error": null
+    },
+    {
+      "requirement_id": "9",
+      "verdict": "unverified",
+      "title": "Not covered by automated suite",
+      "steps": [],
+      "expected": "See PRD.",
+      "observed": "No automated check mapped.",
+      "evidence": [],
+      "error": null
+    },
+    {
+      "requirement_id": "90",
+      "verdict": "unverified",
+      "title": "Not covered by automated suite",
+      "steps": [],
+      "expected": "See PRD.",
+      "observed": "No automated check mapped.",
+      "evidence": [],
+      "error": null
+    },
+    {
+      "requirement_id": "91",
+      "verdict": "unverified",
+      "title": "Not covered by automated suite",
+      "steps": [],
+      "expected": "See PRD.",
+      "observed": "No automated check mapped.",
+      "evidence": [],
+      "error": null
+    },
+    {
+      "requirement_id": "92",
+      "verdict": "unverified",
+      "title": "Not covered by automated suite",
+      "steps": [],
+      "expected": "See PRD.",
+      "observed": "No automated check mapped.",
+      "evidence": [],
+      "error": null
+    },
+    {
+      "requirement_id": "93",
+      "verdict": "unverified",
+      "title": "Not covered by automated suite",
+      "steps": [],
+      "expected": "See PRD.",
+      "observed": "No automated check mapped.",
+      "evidence": [],
+      "error": null
+    },
+    {
+      "requirement_id": "94",
+      "verdict": "unverified",
+      "title": "Not covered by automated suite",
+      "steps": [],
+      "expected": "See PRD.",
+      "observed": "No automated check mapped.",
+      "evidence": [],
+      "error": null
+    },
+    {
+      "requirement_id": "95",
+      "verdict": "unverified",
+      "title": "Not covered by automated suite",
+      "steps": [],
+      "expected": "See PRD.",
+      "observed": "No automated check mapped.",
+      "evidence": [],
+      "error": null
+    },
+    {
+      "requirement_id": "96",
+      "verdict": "unverified",
+      "title": "Not covered by automated suite",
+      "steps": [],
+      "expected": "See PRD.",
+      "observed": "No automated check mapped.",
+      "evidence": [],
+      "error": null
+    },
+    {
+      "requirement_id": "97",
+      "verdict": "unverified",
+      "title": "Not covered by automated suite",
+      "steps": [],
+      "expected": "See PRD.",
+      "observed": "No automated check mapped.",
+      "evidence": [],
+      "error": null
+    },
+    {
+      "requirement_id": "98",
+      "verdict": "unverified",
+      "title": "Not covered by automated suite",
+      "steps": [],
+      "expected": "See PRD.",
+      "observed": "No automated check mapped.",
+      "evidence": [],
+      "error": null
+    },
+    {
+      "requirement_id": "99",
+      "verdict": "unverified",
+      "title": "Not covered by automated suite",
+      "steps": [],
+      "expected": "See PRD.",
+      "observed": "No automated check mapped.",
+      "evidence": [],
+      "error": null
+    }
+  ],
+  "costs": [
+    {
+      "label": "Automated browser checks",
+      "model": "n/a (deterministic Playwright)",
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "estimated_usd": 0.0,
+      "notes": "No LLM calls in the default suite."
+    },
+    {
+      "label": "PRD Extraction",
+      "model": "gemini-2.5-flash",
+      "input_tokens": 1263,
+      "output_tokens": 5257,
+      "estimated_usd": 0.0068,
+      "notes": "Dynamically extracted requirements using the Gemini API."
+    }
+  ],
+  "total_estimated_usd": 0.0068
+}
