@@ -85,7 +85,7 @@ demobank-qa --url http://localhost:5173 --api-url http://localhost:8000 --prd ..
 
 ## Outputs & Artifacts
 
-After a successful run, the `reports/` directory will contain:
+After a successful run, the `Report/` directory will contain:
 
 - `audit.md` — A human-readable audit for judges, detailing passed/failed metrics and exact LLM token cost calculations.
 - `audit.json` — Machine-readable test results.
