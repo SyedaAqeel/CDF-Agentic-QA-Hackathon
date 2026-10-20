@@ -93,13 +93,22 @@ After a successful run, the `Report/` directory will contain:
 
 ## Cost Breakdown
 
-The agent dynamically calculates costs based on Gemini 2.5 Flash pricing ($0.15 / 1M input tokens, $1.25 / 1M output tokens).
+Cost Breakdown
+
+The agent estimates LLM cost from the token counts reported by the Gemini API, using the published Gemini 2.5 Flash paid-tier rates:
+
+| Item | Rate (per 1M tokens) |
+|------|------|
+| Input | $0.30 |
+| Output | $2.50 |
 
 For the demonstrated PRD extraction run:
 
-- **Input Tokens:** 1,263
-- **Output Tokens:** 5,257
-- **Total Estimated Cost:** **$0.0068 USD**
+| Metric |	Value |
+|--------|------|
+| Input tokens |	1,263 |
+| Output tokens |	5,257 |
+| Estimated cost |	$0.0135 |
 
 ## License / Scope
 
