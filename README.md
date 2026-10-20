@@ -93,8 +93,6 @@ After a successful run, the `Report/` directory will contain:
 
 ## Cost Breakdown
 
-Cost Breakdown
-
 The agent estimates LLM cost from the token counts reported by the Gemini API, using the published Gemini 2.5 Flash paid-tier rates:
 
 | Item | Rate (per 1M tokens) |
